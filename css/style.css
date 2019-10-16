@@ -2,6 +2,7 @@
     background-image: url("../images/home.jpg");
     background-size: cover;
     background-position: center;
+    height: 100vh;
 }
 
 li, ul {
@@ -17,6 +18,12 @@ img {
     overflow: hidden;
 }
 
+.link, .link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
 #home_portrait {
     border-radius: 100%;
     background-size: cover;
@@ -28,7 +35,7 @@ img {
 }
 
 #initiales {
-    height: 40vh;
+    height: 50vh;
     margin: 5vh;
 }
 
@@ -48,7 +55,7 @@ img {
     max-width: 30vh;
     min-height: 30vh;
     max-height: 30vh;
-    margin: 8vh 5vh 12vh 5vh;  /* haut | droit | bas | gauche */
+    margin: 12vh 5vh 12vh 5vh;  /* haut | droit | bas | gauche */
     perspective: 400px;
 }
 
@@ -169,8 +176,11 @@ a#button2:hover {
 
 /* ------------------------------------------------------------------ */
 
-.link, .link:hover {
-    text-decoration: none;
-    color: white;
-}
+/* Texte de description sur la page d'acceuil */
 
+.description {
+    color: white;
+    height: 10vh;
+    font-size: 1.5vh;
+    margin-top: 3vh;
+}
