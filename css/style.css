@@ -1,0 +1,176 @@
+#home-container {
+    background-image: url("../images/home.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+li, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.oh {
+    overflow: hidden;
+}
+
+#home_portrait {
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    min-width: 30vh;
+    max-width: 30vh;
+    min-height: 30vh;
+    max-height: 30vh;
+}
+
+#initiales {
+    height: 40vh;
+    margin: 5vh;
+}
+
+#acroche {
+    color: white;
+    text-align: center;
+    font-size: 7vh;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+/* L'animation de la 'photo logo' sur la pas d'acceuil */
+.flip-card {
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    min-width: 30vh;
+    max-width: 30vh;
+    min-height: 30vh;
+    max-height: 30vh;
+    margin: 8vh 5vh 12vh 5vh;  /* haut | droit | bas | gauche */
+    perspective: 400px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    height: 30vh; /* hauteur du parent */
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.back-content {
+    margin: auto;
+}
+
+/*-----------------------------------------------------------------------*/
+
+/* Animation pour les boutons de l'acceuil */
+
+.home_button {
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 3vh;
+    overflow: hidden;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.home_button a {
+    z-index: 1;
+    padding: 10px;
+    display: block;
+    margin: 20px auto;
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: black 0 0px 0px 2px inset;
+}
+
+a.button {
+    color: white;
+    box-shadow: white 0 0px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a#button1:hover {
+    color: black;
+    box-shadow: white 0 0px 0px 40px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a#button2:hover {
+    color: black;
+    box-shadow: white 0 80px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Ligne transformé sur la gauche de la page d'acceuil avec info */
+
+#h-intro-left-wrap {
+    top: -6vh;
+    margin: 2vh;
+    width: 100vh;
+    font-size: calc(.42rem + .42vw);
+    transform-origin: top left;
+    transform: rotate(-90deg) translate3d(-100%,0,0);
+}
+
+#h-intro-left-left {
+    position: absolute;
+    top: 0;
+    left: 6.5vh;
+    color: white;
+}
+
+#h-intro-left-center {
+    text-align: center;
+    color: white;
+}
+
+#h-intro-left-right {
+    position: absolute;
+    top: 0;
+    right: 6.5vh;
+    color: white;
+}
+
+/* ------------------------------------------------------------------ */
+
+.link, .link:hover {
+    text-decoration: none;
+    color: white;
+}
+
