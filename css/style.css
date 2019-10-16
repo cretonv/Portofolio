@@ -9,6 +9,10 @@ li, ul {
     list-style: none;
 }
 
+.center{
+    text-align: center;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -23,6 +27,9 @@ img {
     color: white;
 }
 
+#moitie_2 {
+    height: 50vh;
+}
 
 #home_portrait {
     border-radius: 100%;
@@ -41,9 +48,9 @@ img {
 
 #acroche {
     color: white;
-    text-align: center;
+
     font-size: 7vh;
-    margin-top: 1vh;
+    margin-top: 3vh;
     margin-bottom: 2vh;
 }
 /* L'animation de la 'photo logo' sur la pas d'acceuil */
@@ -100,6 +107,114 @@ img {
     margin: auto;
 }
 
+.back-content p{
+    font-size: 1.5vh;
+}
+
+#home_nom {
+    font-weight: bolder;
+    font-size: 2.5vh;
+}
+
+/*-----------------------------------------------------------------------*/
+
+/* Style du bouton burger */
+
+#burger {               /* Style du div principale */
+    position: fixed;
+    right: 2vh;
+    top: 2vh;
+    width: 7vh;
+    height: 7vh;
+    overflow: hidden;
+    z-index: 7000;
+}
+
+
+.burger-line-wrap {             /* Style des lignes horizontales*/
+    left: 2vh;
+    width: 3vh;
+    position: absolute;
+    height: 0.1vh;
+    transition: width 0.4s;
+}
+
+.burger-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.burger-line-dark {
+    background: white;
+}
+
+.burger-line-wrap-0 {
+    top: 4.5vh;
+}
+
+.burger-line-wrap-1 {
+    top: 3.5vh;
+}
+
+.burger-line-wrap-2 {
+    top: 2.5vh;
+}
+
+
+.burger-border {                /* Style des bordures */
+    box-sizing: border-box;
+    position: absolute;
+}
+
+#burger-border-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+}
+
+#burger-border-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+}
+
+#burger-border-left, #burger-border-right {
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    background: white;
+}
+
+#burger-border-right {
+    right: 0;
+}
+
+
+.burger-close-wrap {        /* Style de la croix */
+    position: absolute;
+    width: 0.3vh;
+    height: 0.1vh;
+    background: white;
+}
+
+#burger-close-wrap-0 {
+    transform: rotate(45deg);
+    top: 3.5vh;
+    left: 2vh;
+}
+
+#burger-close-wrap-1 {
+    transform: rotate(-45deg);
+    right: 2vh;
+    top: 3.5vh;
+}
 /*-----------------------------------------------------------------------*/
 
 /* Animation pour les boutons de l'acceuil */

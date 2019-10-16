@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Acceuil</title>
@@ -9,6 +9,28 @@
 </head>
 <body>
     <header>
+
+        <div id="burger" class="oh" onclick="burger_action()">
+            <div id="burger-hover"></div>
+            <div class="burger-line-wrap-0 burger-line-wrap oh">
+                <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.9s; width: 5vh;"></div>
+            </div>
+            <div class="burger-line-wrap-1 burger-line-wrap oh">
+                <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.7s; width: 5vh;"></div>
+            </div>
+            <div class="burger-line-wrap-2 burger-line-wrap oh">
+                <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.5s; width: 5vh;"></div>
+            </div>
+            <div id="burger-close-wrap-0" class="burger-close-wrap oh" style = "transition: width 0.7s 1s; width: 0vh;"> </div>
+            <div id="burger-close-wrap-1" class="burger-close-wrap oh" style = "transition: width 0.7s 1s; width: 0vh;"> </div>
+            <div id="burger-border-wrap" style="opacity: 0.5;">
+                <div id="burger-border-top" class="burger-border"></div>
+                <div id="burger-border-bottom" class="burger-border"></div>
+                <div id="burger-border-left" class="burger-border"></div>
+                <div id="burger-border-right" class="burger-border"></div>
+            </div>
+        </div>
+
         <div id="home-container" class="container-fluid">
             <div class="row">
                 <div class="col-1">
@@ -33,9 +55,10 @@
                             </div>
                             <div class="flip-card-back">
                                 <div class="back-content">
-                                    <h4>Vincent Creton</h4>
-                                    <p>Étudiant en MMI</p>
-                                    <p>À la recherche d'un stage</p>
+                                    <p><span id="home_nom">Vincent Creton</span></p>
+                                    <p>19 ans</p>
+                                    <p>Munis d'un permis B</p>
+                                    <p>Titulaire d'un bac ES mention bien</p>
                                 </div>
                             </div>
                         </div>
@@ -44,16 +67,25 @@
                 <div class="col-3">
                     <!-- vide pour le centrage -->
                 </div>
+            </div>
+            <div id="moitie_2" class="row">
                 <div class="col-1">
                     <!-- vide pour le centrage -->
 
                 </div>
                 <div class="col-6">
-                    <!-- photo logo de moi-même -->
+                    <!-- accroche -->
                     <div id="acroche" class="mx-auto">
-                        Découvrir mon univers...
-                    </div>
-                    <div class="row">
+                        <div class="center">Découvrir mon univers...</div>
+                        <div class="row">
+                            <div class="col-6 description">
+                                <span>Je suis étudiant</span> en DUT MMI à Grenoble. Mon but est de m'oriebter à la  suite de ce DUT dans le milieu du développement web. Fort de mes compétences en communication visuel et en développment, je cherche aujourd'hui un stage de fin de DUT.
+                            </div>
+                            <div class="col-6 description">
+                                Si vous voulez en apprendre plus sur moi, mes compétences et mes réalisations, je vous laisse découvrir ce site ou même me contacter. Bonne navigation!
+                            </div>
+                        </div>
+                    <!--<div class="row">
                         <div class="col-6">
                             <div class="home_button mx-auto">
                                 <a id="button1" class="link button" href="#">Découvrir mes créations</a>
@@ -63,22 +95,23 @@
                             <div class="home_button mx-auto">
                                 <a id="button2" class="link button" href="#"> Découvrir un truc cool</a>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="col-5">
-                    <div class="row">
+                    <!--<div class="row">
                         <div class="col-6 description">
                             <span>Je suis étudiant</span> en DUT MMI à Grenoble. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Officia deserunt mollit anim id est laborum.
                         </div>
                         <div class="col-6 description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
     </header>
 
 </body>
+<script type="text/javascript" src="./JS/home.js"></script>
 </html>
