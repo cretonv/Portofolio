@@ -128,6 +128,7 @@ img {
     height: 7vh;
     overflow: hidden;
     z-index: 7000;
+    cursor: pointer;
 }
 
 
@@ -298,4 +299,29 @@ a#button2:hover {
     height: 10vh;
     font-size: 1.5vh;
     margin-top: 3vh;
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+/* Style du menu, caché dans un premier temps puis qui apparait sur toute la page*/
+
+#menu {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 4000;
+    background: black;
+    height: 0;
+    transition: all 1s ease-out;
+    color: #fff;
+    overflow: hidden;
+}
+
+#menu.open {
+    height: 100vh;
 }
