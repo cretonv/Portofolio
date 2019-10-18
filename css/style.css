@@ -27,6 +27,10 @@ img {
     color: white;
 }
 
+.no_padding {
+    padding: 0;
+}
+
 #moitie_2 {
     height: 50vh;
 }
@@ -165,9 +169,10 @@ img {
 }
 
 
-.burger-border {                /* Style des bordures */
+.burger-border, .menu-border {                /* Style des bordures */
     box-sizing: border-box;
     position: absolute;
+    opacity: 0.5;
 }
 
 #burger-border-top {
@@ -317,7 +322,7 @@ a#button2:hover {
     z-index: 4000;
     background: black;
     height: 0;
-    transition: all 1s ease-out;
+    transition: all 0.7s ease-out;
     color: #fff;
     overflow: hidden;
 }
@@ -325,3 +330,89 @@ a#button2:hover {
 #menu.open {
     height: 100vh;
 }
+
+#center-menu {
+    height: 70vh;
+    padding: 0;
+}
+
+.verti-menu {
+    height: 15vh;
+    overflow: hidden;
+}
+
+.menu-border-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+    transition: all 0.5s 2.2s;
+}
+
+.menu-border-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+    transition: all 0.5s 1.2s;
+}
+
+.menu-border-left, .menu-border-right {
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    background: white;
+    transform: translateY(-70vh);
+    transition: all 0.5s 1.7s;
+}
+
+.menu-border-right {
+    right: 0;
+}
+
+.border-verti-menu {
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    background: white;
+    right: 0;
+    opacity: 0.5;
+    transition: all 0.5s 0.7s;
+}
+
+.verti-top{
+    transform: translateY(-20vh);
+}
+
+.verti-bottom{
+    transform: translateY(20vh);
+}
+
+.border-top-left{
+    transform: translateX(100vh);
+}
+
+.border-top-right{
+    transform: translateX(-100vh);
+}
+
+.border-bottom-left {
+    transform: translateX(-100vh);
+}
+
+.border-bottom-right {
+    transform: translateX(100vh);
+}
+/* Les règles suivnates sont ajoutées via JS pour animé le contenu du menu à son apparition */
+
+.top-apparition {
+    transform: translateY(0);
+}
+
+.middle-top-apparition {
+    transform: translateY(0);
+}
+
+

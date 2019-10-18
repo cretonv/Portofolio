@@ -10,6 +10,18 @@ var close2 = closes[1];
 var menu = document.querySelector("#menu");
 menu.open = false; // garde en mémoire l'état du menu
 
+var top_bar = document.querySelector(".verti-top");
+var bottom_bar = document.querySelector(".verti-bottom");
+
+var top_left_bar = document.querySelector(".border-top-left");
+var top_right_bar = document.querySelector(".border-top-right");
+
+var middle_left_bar = document.querySelector(".menu-border-left");
+var middle_right_bar = document.querySelector(".menu-border-right");
+
+var bottom_left_bar = document.querySelector(".border-bottom-left");
+var bottom_right_bar = document.querySelector(".border-bottom-right");
+
 function burger_action(){
 
     if (line1.style.width == "0vh") {                       // animation des lignes du bouton
@@ -52,9 +64,35 @@ function burger_action(){
 
     if (!menu.open) {                           // si le menu est fermé
         menu.classList.add('open')
-        menu.open = true
+        top_bar.classList.add("top-apparition")
+        bottom_bar.classList.add("top-apparition")
+
+        top_right_bar.classList.add("middle-top-apparition")
+        top_left_bar.classList.add("middle-top-apparition")
+
+        middle_left_bar.classList.add("top-apparition")
+        middle_right_bar.classList.add("top-apparition")
+
+        bottom_right_bar.classList.add("middle-top-apparition")
+        bottom_left_bar.classList.add("middle-top-apparition")
+
+        menu.open = true                        // On met à jour l'indicateur d'état
+
     } else {                                    // Si le menu est ouvert
-        menu.classList.remove('open')        // On enlève la classe CSS
-        menu.open = false                           // On met à jour l'indicateur d'état
+
+        menu.classList.remove('open')                    // On enlève la classe CSS
+        top_bar.classList.remove("top-apparition")
+        bottom_bar.classList.remove("top-apparition")
+
+        top_right_bar.classList.remove("middle-top-apparition")
+        top_left_bar.classList.remove("middle-top-apparition")
+
+        middle_left_bar.classList.remove("top-apparition")
+        middle_right_bar.classList.remove("top-apparition")
+
+        bottom_right_bar.classList.remove("middle-top-apparition")
+        bottom_left_bar.classList.remove("middle-top-apparition")
+
+        menu.open = false                                       // On met à jour l'indicateur d'état
     }
 }
