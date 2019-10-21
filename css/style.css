@@ -35,6 +35,10 @@ img {
     height: 50vh;
 }
 
+.intertitre {
+    height: 20vh;
+   }
+
 #home_portrait {
     border-radius: 100%;
     background-size: cover;
@@ -46,13 +50,12 @@ img {
 }
 
 #initiales {
-    height: 50vh;
-    margin: 5vh;
+    height: 48vh;
+    margin-top: 2vh;
 }
 
 #acroche {
     color: white;
-
     font-size: 7vh;
     margin-top: 3vh;
     margin-bottom: 2vh;
@@ -66,7 +69,7 @@ img {
     max-width: 30vh;
     min-height: 30vh;
     max-height: 30vh;
-    margin: 12vh 5vh 12vh 5vh;  /* haut | droit | bas | gauche */
+    margin: 10vh 5vh 10vh 5vh;  /* haut | droit | bas | gauche */
     perspective: 400px;
 }
 
@@ -268,8 +271,7 @@ a#button2:hover {
 /* Ligne transformé sur la gauche de la page d'acceuil avec info */
 
 #h-intro-left-wrap {
-    top: -6vh;
-    margin: 2vh;
+    margin-left: 2vh;
     width: 100vh;
     font-size: calc(.42rem + .42vw);
     transform-origin: top left;
@@ -301,7 +303,7 @@ a#button2:hover {
 
 .description {
     color: white;
-    height: 10vh;
+    height: 30vh;
     font-size: 1.5vh;
     margin-top: 3vh;
 }
@@ -415,4 +417,61 @@ a#button2:hover {
     transform: translateY(0);
 }
 
+/* ------------------------------------------------------------------ */
+
+/* Lesrègles suivantes concernent les items du menu */
+
+.menu-item {
+    height: 12.5vh;
+    text-align: center;
+    line-height: 12.5vh;
+    font-size: 7vh;
+    opacity: 0;
+    transition: opacity 0.7s 2.7s;
+    cursor: pointer;
+}
+
+#champ-item {
+    height: 50vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.menu-item-visible {
+    opacity: 0.8;
+}
+
+.anim-item {
+    overflow: hidden;
+    /*color: transparent;*/
+    z-index: 4001;
+    background-image: url("../images/text_back.jpg") ;             /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 1s;
+    background-position: 50% -200%; /*background-position: 50% -100%;*/
+    background-size: cover;
+}
+
+.anim-item:hover {
+    overflow: hidden;
+    /*color: transparent;*/
+    z-index: 4001;
+    background-image: url("../images/text_back.jpg") ;             /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 1s;
+    background-position: 50% -100%;
+    background-size: cover;
+}
+
+.underline-item {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+}
+
+/* Ligne réseau du menu */
 
