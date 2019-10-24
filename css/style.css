@@ -31,6 +31,10 @@ img {
     padding: 0;
 }
 
+.opacity {                  /*Permet de remettre l'opacité sur des éléments avec le js*/
+    opacity: 1 !important;
+}
+
 #moitie_2 {
     height: 50vh;
 }
@@ -460,7 +464,7 @@ a#button2:hover {
     background-image: url("../images/text_back.jpg") ;             /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
     -webkit-background-clip: text;
     color: transparent;
-    transition: background-position 1s;
+    transition: background-position 0.8s;
     background-position: 50% -100%;
     background-size: cover;
 }
@@ -475,3 +479,22 @@ a#button2:hover {
 
 /* Ligne réseau du menu */
 
+#ligne-reseau{
+    color: white;
+    opacity: 0;
+    transition: opacity 0.7s 2.7s;
+}
+
+#linkedin {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh;
+}
+
+#github {
+    position: absolute;
+    top: 7vh;
+    left: 2vh;
+    font-size: 3vh;
+}

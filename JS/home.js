@@ -28,7 +28,8 @@ var menu2= menu_items[1];
 var menu3= menu_items[2];
 var menu4= menu_items[3];
 
-var reseau_item = document.querySelector(".reseau-element");
+var ligne_reseau = document.querySelector('#ligne-reseau');
+
 
 
 
@@ -93,6 +94,8 @@ function burger_action(){
         menu3.classList.add("menu-item-visible");
         menu4.classList.add("menu-item-visible");
 
+        ligne_reseau.classList.add("opacity");
+
 
         menu.open = true                        // On met à jour l'indicateur d'état
 
@@ -112,6 +115,8 @@ function burger_action(){
 
         bottom_right_bar.classList.remove("middle-top-apparition")
         bottom_left_bar.classList.remove("middle-top-apparition")
+
+        ligne_reseau.classList.remove("opacity");
 
 
         menu.open = false                                       // On met à jour l'indicateur d'état
