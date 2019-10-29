@@ -104,7 +104,7 @@ function burger_action(){
         menu.classList.remove('open')                    // On enlève la classe CSS et fais disparaitre le menu
 
 
-        top_bar.classList.remove("top-apparition")
+        /*top_bar.classList.remove("top-apparition")                // Gere la disparition du menu, à voir si on garde
         bottom_bar.classList.remove("top-apparition")
 
         top_right_bar.classList.remove("middle-top-apparition")
@@ -115,7 +115,7 @@ function burger_action(){
 
         bottom_right_bar.classList.remove("middle-top-apparition")
         bottom_left_bar.classList.remove("middle-top-apparition")
-
+*/
         ligne_reseau.classList.remove("opacity");
 
 

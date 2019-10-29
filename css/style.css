@@ -9,6 +9,15 @@ li, ul {
     list-style: none;
 }
 
+.no-link {
+    text-decoration: none;
+    color: white;
+}
+
+.no-link:hover {
+    color: white;
+}
+
 .center{
     text-align: center;
 }
