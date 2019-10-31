@@ -30,47 +30,22 @@ var menu4= menu_items[3];
 
 var ligne_reseau = document.querySelector('#ligne-reseau');
 
+var photos = document.querySelector("#photos");
+var realisations = document.querySelector("#realisations");
+
+var display_underline = document.querySelectorAll(".display-underline");
+var display_underline1 = display_underline[0];
+var display_underline2 = display_underline[1];
+
+var display_container = document.querySelectorAll(".display-container");
+var display_container1 = display_container[0];
+var display_container2 = display_container[1];
 
 
 
 function burger_action(){
 
-    if (line1.style.width == "0vh") {                       // animation des lignes du bouton
-        line1.style.width = "5vh";
-        line1.style.transition = "width 0.9s 1s";
-    } else  {
-        line1.style.width = "0vh";
-        line1.style.transition = "width 0.9s";
-    }
-    if (line2.style.width == "0vh") {
-        line2.style.width = "5vh";
-        line2.style.transition = "width 0.7s 1s";
-    } else  {
-        line2.style.width = "0vh";
-        line2.style.transition = "width 0.7s";
-    }
-    if (line3.style.width == "0vh") {
-        line3.style.width = "5vh";
-        line3.style.transition = "width 0.5s 1s";
-    } else  {
-        line3.style.width = "0vh";
-        line3.style.transition = "width 0.5s";
-    }
-
-    if (close1.style.width == "0vh") {              // animation de la croix du bouton
-        close1.style.width = "3vh";
-        close1.style.transition = "width 0.7s 1s";
-    } else {
-        close1.style.width = "0vh";
-        close1.style.transition = "width 0.7s";
-    }
-    if (close2.style.width == "0vh") {
-        close2.style.width = "3vh";
-        close2.style.transition = "width 0.7s 1s";
-    } else {
-        close2.style.width = "0vh";
-        close2.style.transition = "width 0.7s";
-    }
+    burger_animation();                         // animation du bouton burger
 
 
     if (!menu.open) {                           // si le menu est fermé
@@ -116,9 +91,104 @@ function burger_action(){
         bottom_right_bar.classList.remove("middle-top-apparition")
         bottom_left_bar.classList.remove("middle-top-apparition")
 */
-        ligne_reseau.classList.remove("opacity");
+        /*ligne_reseau.classList.remove("opacity");*/
 
 
         menu.open = false                                       // On met à jour l'indicateur d'état
+    }
+
+
+}
+
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
+function realisations_access() {
+
+    burger_animation()                                  // animation du bouton burger
+
+    menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
+
+    realisations.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
+
+
+
+    menu.open = false                                       // On met à jour l'indicateur d'état
+}
+
+
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
+function photos_access() {
+
+    burger_animation()                                  // animation du bouton burger
+
+    menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
+
+    photos.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
+
+
+
+    menu.open = false                                       // On met à jour l'indicateur d'état
+}
+
+function display_action(choix) {
+    if (choix == 1) {
+        display_underline2.classList.remove("display-underline-active");
+        display_underline1.classList.add("display-underline-active")
+
+        display_container2.classList.remove("display-container-active");
+        display_container1.classList.add("display-container-active")
+    }
+    else if (choix == 2) {
+        display_underline2.classList.add("display-underline-active");
+        display_underline1.classList.remove("display-underline-active")
+
+        display_container2.classList.add("display-container-active");
+        display_container1.classList.remove("display-container-active")
+    }
+
+}
+
+
+function burger_animation() {                               // animation du bouton burger
+    if (line1.style.width == "0vh") {                       // animation des lignes du bouton
+        line1.style.width = "5vh";
+        line1.style.transition = "width 0.9s 1s";
+    } else  {
+        line1.style.width = "0vh";
+        line1.style.transition = "width 0.9s";
+    }
+    if (line2.style.width == "0vh") {
+        line2.style.width = "5vh";
+        line2.style.transition = "width 0.7s 1s";
+    } else  {
+        line2.style.width = "0vh";
+        line2.style.transition = "width 0.7s";
+    }
+    if (line3.style.width == "0vh") {
+        line3.style.width = "5vh";
+        line3.style.transition = "width 0.5s 1s";
+    } else  {
+        line3.style.width = "0vh";
+        line3.style.transition = "width 0.5s";
+    }
+
+    if (close1.style.width == "0vh") {              // animation de la croix du bouton
+        close1.style.width = "3vh";
+        close1.style.transition = "width 0.7s 1s";
+    } else {
+        close1.style.width = "0vh";
+        close1.style.transition = "width 0.7s";
+    }
+    if (close2.style.width == "0vh") {
+        close2.style.width = "3vh";
+        close2.style.transition = "width 0.7s 1s";
+    } else {
+        close2.style.width = "0vh";
+        close2.style.transition = "width 0.7s";
     }
 }

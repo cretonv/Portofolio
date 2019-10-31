@@ -9,6 +9,8 @@
     <!--<script src="./lib/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>-->
 </head>
 <body>
+
+
     <header> <!-- Code HTML de la page d'acceuill -->
 
         <div id="burger" class="oh" onclick="burger_action()">
@@ -80,7 +82,7 @@
                         <div class="center intertitre">Découvrir mon univers...</div>
                         <div class="row">
                             <div class="col-6 description">
-                                <span>Je suis étudiant</span> en DUT MMI à Grenoble. Mon but est de m'oriebter à la  suite de ce DUT dans le milieu du développement web. Fort de mes compétences en communication visuel et en développment, je cherche aujourd'hui un stage de fin de DUT.
+                                <span>Je suis étudiant</span> en DUT MMI à Grenoble. Mon but est de m'orienter à la  suite de ce DUT dans le milieu du développement web. Fort de mes compétences en communication visuel et en développment, je cherche aujourd'hui un stage de fin de DUT.
                             </div>
                             <div class="col-6 description">
                                 Si vous voulez en apprendre plus sur moi, mes compétences et mes réalisations, je vous laisse découvrir ce site ou même me contacter. Bonne navigation!
@@ -114,6 +116,7 @@
         </div>
     </header>
 
+
     <div id="menu">  <!-- COed HTML de la page menu -->
         <div class="container-fluid">
             <div class="row">
@@ -131,10 +134,10 @@
                     <div id="menu-border-wrap">
                         <div id="champ-item">
                             <div class="row">
-                                <div class="col-12 menu-item"> <span class="anim-item">ITEM 1</span> </div>
-                                <div class="col-12 menu-item"> <span class="anim-item">ITEM 2</span></div>
-                                <div class="col-12 menu-item"> <span class="anim-item">ITEM 3</span></div>
-                                <div class="col-12 menu-item"> <span class="anim-item">ITEM 4</span> </div>
+                                <div class="col-12 menu-item" onclick="realisations_access()"> <span class="anim-item">RÉALISATIONS</span> </div>
+                                <div class="col-12 menu-item" onclick="photos_access()"> <span class="anim-item">PHOTOGRAPHIES</span></div>
+                                <div class="col-12 menu-item"> <span class="anim-item">PARCOURS</span></div>
+                                <div class="col-12 menu-item"> <span class="anim-item">CONTACTS</span> </div>
                             </div>
                             <div class="menu-border menu-border-left"></div>
                             <div class="menu-border menu-border-right"></div>
@@ -156,6 +159,47 @@
         <div id="ligne-reseau">
             <div id="linkedin" class="reseau-element"> <a class="no-link" target="_blank" href="https://www.linkedin.com/in/vincent-creton-776816187"> <i class="fab fa-linkedin"></i> </a></div>
             <div id="github" class="reseau-element"> <a class="no-link" target="_blank" href="https://github.com/cretonv"> <i class="fab fa-github"></i> </a> </div>
+        </div>
+    </div>
+
+
+    <div id="realisations">
+        <h1>REALISATIONS</h1>
+
+
+
+
+    </div>
+
+
+    <div id="photos">
+        <div class="container-fluid">
+            <div class="row nav-line">
+                <div class="col-3 center"> <span class="nav-item"> Gallery 1 </span> </div>
+                <div class="col-3 center"> <span class="nav-item"> Gallery 2 </span> </div>
+                <div class="col-3 center"> <span class="nav-item"> Gallery 3 </span> </div>
+                <div class="col-3"> </div>
+            </div>
+
+            <div class="row display-selection">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <div class="display-container mx-auto" onclick="display_action(1)">
+                        <span class="display-item"> THUMBNAILS </span>
+                        <div class="display-underline"> </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="display-container mx-auto display-container-active" onclick="display_action(2)">
+                        <span class="display-item"> CATEGORIE </span>
+                        <div class="display-underline display-underline-active"></div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+
+
+
         </div>
     </div>
 

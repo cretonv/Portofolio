@@ -1,3 +1,5 @@
+header, #menu { overflow-y: hidden; }
+
 #home-container {
     background-image: url("../images/home.jpg");
     background-size: cover;
@@ -462,7 +464,7 @@ a#button2:hover {
     -webkit-background-clip: text;
     color: transparent;
     transition: background-position 1s;
-    background-position: 50% -200%; /*background-position: 50% -100%;*/
+    background-position: 50% -110%; /*background-position: 50% -100%;*/
     background-size: cover;
 }
 
@@ -474,7 +476,7 @@ a#button2:hover {
     -webkit-background-clip: text;
     color: transparent;
     transition: background-position 0.8s;
-    background-position: 50% -100%;
+    background-position: 50% -50%;
     background-size: cover;
 }
 
@@ -506,4 +508,154 @@ a#button2:hover {
     top: 7vh;
     left: 2vh;
     font-size: 3vh;
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+/* Style de la page réalisations, caché dans un premier temps puis qui apparait sur toute la page*/
+
+#realisations {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 1000;
+    background: black;
+    height: 100vh;
+    transition: all 0.7s ease-out 0.7s;
+    color: #fff;
+    overflow: hidden;
+}
+
+#realisations.open {
+    width: 100vw;
+}
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+/* Style de la page photographies, caché dans un premier temps puis qui apparait sur toute la page*/
+
+#photos {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 1000;
+    background: black;
+    height: 100vh;
+    transition: all 0.7s ease-out 0.7s;
+    color: #fff;
+    overflow: hidden;
+}
+
+#photos.open {
+    width: 100vw;
+}
+
+/* ------------------------------------------------------------------ */
+/* Style de la nav bar de la page photographie avec l'animation de ses éléments */
+
+.nav-line {
+    height: 11vh;
+    line-height: 11vh;
+    white-space: nowrap;
+}
+
+.nav-item {
+    font-size: 4vh;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    opacity: 0.8;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 1vh;
+    left: 0;
+    background: linear-gradient(to right, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ------------------------------------------------------------------ */
+/* Style de la partie display selection */
+
+.display-selection {
+    height: 14vh;
+}
+
+/* Animation pour les boutons de la page photograhpies dans la partie display */
+
+.display-container {
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+    padding: 3px;
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+}
+
+.display-container:hover {
+    opacity: 0.8;
+    transition: opacity 0.25s;
+}
+
+.display-container-active {
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+    padding: 3px;
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.25s;
+}
+
+.display-item {
+    font-size: 6vh;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.display-underline {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+    transition: all 0.25s;
+}
+
+.display-container:hover .display-underline{
+    transform: rotate(0.25turn) translate(-10%, -50%) scale(0.50);
+    opacity: 0.5;
+    transition: all 0.25s;
+}
+
+.display-underline-active {
+    transform: rotate(0.25turn) translate(-10%, -50%) scale(0.50);
+    opacity: 0.5;
+    transition: all 0.25s;
 }
