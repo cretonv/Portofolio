@@ -38,6 +38,10 @@ img {
     color: white;
 }
 
+.center-me {
+    margin: 0 auto;
+}
+
 .no_padding {
     padding: 0;
 }
@@ -649,13 +653,116 @@ a#button2:hover {
 }
 
 .display-container:hover .display-underline{
-    transform: rotate(0.25turn) translate(-10%, -50%) scale(0.50);
+    transform: rotate(0.25turn) translate(-13%, -50%) scale(0.30);
     opacity: 0.5;
     transition: all 0.25s;
 }
 
 .display-underline-active {
-    transform: rotate(0.25turn) translate(-10%, -50%) scale(0.50);
+    transform: rotate(0.25turn) translate(-13%, -50%) scale(0.30);
     opacity: 0.5;
     transition: all 0.25s;
 }
+
+/* ------------------------------------------------------------------ */
+/* Style de la partie où s'affiche les photos, sous les 2 formes en carrouselles ou en mosaïques */
+
+.affichage-zone {
+    height: 75vh;
+}
+
+/* Gère les classes CSS pour l'affichage du nom de la gallerie et son numéro */
+
+.gallery-name {
+    height: 70vh;
+    line-height: 70vh;
+    font-size: 4vh;
+    text-align: center;
+    z-index: 1003;
+}
+
+.gallery-number {
+    opacity: 0.3;
+    font-size: 7vh;
+    position: absolute;
+    top: -1vh;
+    left: 6vw;
+}
+
+.gallery-tag {
+    height: fit-content;
+    position: relative;
+}
+
+/* Gère les classes CSS pour l'affichage des photos de la gallerie */
+
+.gallerie {
+    height: 70vh;
+    line-height: 70vh;
+    width: 19750px;
+    transition: transform 1s, opacity 1s;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow: auto;*/
+}
+
+.gallerie-img {
+    position: relative;
+    float: left;
+    height: 55vh;
+    width: 85vh;
+    margin: 7.5vh 45px;
+    opacity: 0.3;
+}
+
+.focus {
+    opacity: 1;
+}
+
+/*.img1 {
+    transform: translateX(0%);
+    z-index: 2001;
+}
+
+.img2 {
+    transform: translateX(110%);
+    z-index: 2001;
+}
+
+.img3 {
+    transform: translateX(220%);
+    z-index: 2001;
+}
+
+.img4 {
+    transform: translateX(330%);
+    z-index: 2001;
+}*/
+
+/* Gère les classes CSS pour les commandes d'affichages de la gallerie */
+
+.prev-control {
+    left: -10vh;
+    float: left;
+}
+
+.next-control {
+    float: right;
+    right: 0;
+}
+
+.control {
+    position: relative;
+    bottom: 9vh;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 1002;
+    transform: scale(0.5);
+}
+
+.control:hover {
+    opacity: 0.8;
+}
+

@@ -185,7 +185,7 @@
                 <div class="col-2"></div>
                 <div class="col-4">
                     <div class="display-container mx-auto" onclick="display_action(1)">
-                        <span class="display-item"> THUMBNAILS </span>
+                        <span class="display-item"> MOSAÏQUE </span>
                         <div class="display-underline"> </div>
                     </div>
                 </div>
@@ -198,7 +198,30 @@
                 <div class="col-2"></div>
             </div>
 
+            <div class="row affichage-zone">
+                <div class="col-3" style="z-index: 1003;">
+                    <div class="gallery-name">
+                        <span id="gallery-tag">
+                            Gallery
+                            <span class="gallery-number">01</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="gallerie center" style="transform: translateX(0vh);">
+                        <img class="gallerie-img center-me position0 focus" alt="photo" src="./images/Irlande/Irlande1.jpg"/>
+                        <img class="gallerie-img center-me position1" alt="photo" src="./images/Irlande/Irlande2.jpg"/>
+                        <img class="gallerie-img center-me position2" alt="photo" src="./images/Irlande/Irlande3.jpg"/>
+                        <img class="gallerie-img center-me position3" alt="photo" src="./images/Irlande/Irlande4.jpg"/>
 
+                    </div>
+                    <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide()">
+                    <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide()">
+                </div>
+                <div class="col-12">
+
+                </div>
+            </div>
 
         </div>
     </div>

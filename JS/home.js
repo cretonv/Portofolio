@@ -41,6 +41,13 @@ var display_container = document.querySelectorAll(".display-container");
 var display_container1 = display_container[0];
 var display_container2 = display_container[1];
 
+var slider = document.querySelector('.gallerie');
+var slider_images = document.querySelectorAll('.gallerie-img');
+var slide_value = 0;
+var slide_select = 0;
+/*var fleche_gauche = document.querySelector('.prev-control');
+var fleche_droite = document.querySelector('.next-control');*/
+
 
 
 function burger_action(){
@@ -191,4 +198,40 @@ function burger_animation() {                               // animation du bout
         close2.style.width = "0vh";
         close2.style.transition = "width 0.7s";
     }
+}
+
+function next_slide() {
+    if ( slider.style.transform != "translateX(-277.5vh)" ) {
+        slide_value -= 92.5
+        console.log('next');
+        slider.style.transform = "translateX(" + slide_value + "vh)"
+        image_select_next()
+    }
+}
+
+function prev_slide() {
+    if (slider.style.transform != "translateX(0vh)") {
+        slide_value += 92.5
+        console.log('prev');
+        slider.style.transform = "translateX(" + slide_value + "vh)"
+        image_select_prev()
+    }
+}
+
+function image_select_next() {
+    console.log('ça appelle next');
+    slider_images[slide_select].classList.remove('focus');
+    if (slide_select < 4){
+        slide_select ++;
+    }
+    slider_images[slide_select].classList.add('focus');
+}
+
+function image_select_prev() {
+    slider_images[slide_select].classList.remove('focus');
+    if ( slide_select > 0) {
+        slide_select -= 1;
+    }
+    slider_images[slide_select].classList.add('focus');
+    console.log('ça appelle prev');
 }
