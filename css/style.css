@@ -18,6 +18,7 @@ li, ul {
 
 .no-link:hover {
     color: white;
+    text-decoration: none;
 }
 
 .center{
@@ -590,7 +591,7 @@ a#button2:hover {
     width: 100%;
     transform: scaleX(0);
     height: 3px;
-    bottom: 1vh;
+    bottom: 2vh;
     left: 0;
     background: linear-gradient(to right, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
     transform-origin: bottom right;
@@ -755,8 +756,8 @@ a#button2:hover {
 
 .control {
     position: relative;
-    bottom: 9vh;
-    opacity: 0.3;
+    bottom: 4vh;
+    opacity: 0.5;
     cursor: pointer;
     z-index: 1002;
     transform: scale(0.5);
@@ -766,3 +767,36 @@ a#button2:hover {
     opacity: 0.8;
 }
 
+/* Gère les classes CSS pour le lien qui permet d'accéder à la collection Unsplash */
+
+.unsplash-zone {
+    line-height: 3vh;
+    height: 3vh;
+    position: relative;
+    bottom: 3vh;
+}
+
+.link-unsplash {
+    font-size: 2vh;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    opacity: 0.8;
+}
+
+.link-unsplash::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.link-unsplash:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
