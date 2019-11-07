@@ -201,8 +201,8 @@ function burger_animation() {                               // animation du bout
 }
 
 function next_slide() {
-    if ( slider.style.transform != "translateX(-277.5vh)" ) {
-        slide_value -= 92.5
+    if ( slider.style.transform != "translateX(-281.5vh)" ) {
+        slide_value -= 96.5
         console.log('next');
         slider.style.transform = "translateX(" + slide_value + "vh)"
         image_select_next()
@@ -211,7 +211,7 @@ function next_slide() {
 
 function prev_slide() {
     if (slider.style.transform != "translateX(0vh)") {
-        slide_value += 92.5
+        slide_value += 96.5
         console.log('prev');
         slider.style.transform = "translateX(" + slide_value + "vh)"
         image_select_prev()
