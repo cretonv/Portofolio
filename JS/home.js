@@ -43,10 +43,17 @@ var display_container2 = display_container[1];
 
 var slider = document.querySelector('.gallerie');
 var slider_images = document.querySelectorAll('.gallerie-img');
+var slider_2 = document.querySelector('.gallerie-2');
+var slider_images_2 = document.querySelectorAll('.gallerie-img-2');
+var slider_3 = document.querySelector('.gallerie-3');
+var slider_images_3 = document.querySelectorAll('.gallerie-img-3');
 var slide_value = 0;
 var slide_select = 0;
-/*var fleche_gauche = document.querySelector('.prev-control');
-var fleche_droite = document.querySelector('.next-control');*/
+
+var gallerie_Irlande = document.querySelector('#gallerie-Irlande');
+var gallerie_Londres = document.querySelector('#gallerie-Londres');
+var gallerie_Divers = document.querySelector('#gallerie-Divers');
+var gallerie_active = 1;
 
 
 
@@ -200,8 +207,9 @@ function burger_animation() {                               // animation du bout
     }
 }
 
+/* Fonctions pour le slider */
 function next_slide() {
-    if ( slider.style.transform != "translateX(-281.5vh)" ) {
+    if ( slider.style.transform != "translateX(-289.5vh)" ) {
         slide_value -= 96.5
         console.log('next');
         slider.style.transform = "translateX(" + slide_value + "vh)"
@@ -233,5 +241,129 @@ function image_select_prev() {
         slide_select -= 1;
     }
     slider_images[slide_select].classList.add('focus');
+    console.log('ça appelle prev');
+}
+
+function Irlande_view() {
+    if(gallerie_active !=1) {
+        for(var x = 0; x < 4; x++){
+            slider_images[x].classList.remove('focus');
+        }
+        slide_select = 0;
+        slider_images[slide_select].classList.add('focus');
+        slide_value = 0;
+        slider.style.transform = "translateX(" + slide_value + "vh)"
+        gallerie_Londres.classList.add('hidden');
+        gallerie_Divers.classList.add('hidden');
+        gallerie_Irlande.classList.remove('hidden');
+        gallerie_active = 1;
+    }
+}
+
+function Londres_view() {
+    if(gallerie_active !=2) {
+        for(var x = 0; x < 4; x++){
+            slider_images_2[x].classList.remove('focus');
+        }
+        slide_select = 0;
+        slider_images_2[slide_select].classList.add('focus');
+        slide_value = 0;
+        slider_2.style.transform = "translateX(" + slide_value + "vh)"
+        gallerie_Irlande.classList.add('hidden');
+        gallerie_Divers.classList.add('hidden');
+        gallerie_Londres.classList.remove('hidden');
+        gallerie_active = 2;
+    }
+}
+
+function Divers_view() {
+    if(gallerie_active !=3) {
+        for(var x = 0; x < 4; x++){
+            slider_images_3[x].classList.remove('focus');
+        }
+        slide_select = 0;
+        slider_images_3[slide_select].classList.add('focus');
+        slide_value = 0;
+        slider_3.style.transform = "translateX(" + slide_value + "vh)"
+        gallerie_Irlande.classList.add('hidden');
+        gallerie_Londres.classList.add('hidden');
+        gallerie_Divers.classList.remove('hidden');
+        gallerie_active = 3;
+    }
+}
+
+/* Fonctions dédoublé avec les noms qui correspondent à la deuxième gallerie */
+
+function next_slide_2() {
+    if ( slider_2.style.transform != "translateX(-289.5vh)" ) {
+        slide_value -= 96.5
+        console.log('next');
+        slider_2.style.transform = "translateX(" + slide_value + "vh)"
+        image_select_next_2()
+    }
+}
+
+function prev_slide_2() {
+    if (slider_2.style.transform != "translateX(0vh)") {
+        slide_value += 96.5
+        console.log('prev');
+        slider_2.style.transform = "translateX(" + slide_value + "vh)"
+        image_select_prev_2()
+    }
+}
+
+function image_select_next_2() {
+    console.log('ça appelle next');
+    slider_images_2[slide_select].classList.remove('focus');
+    if (slide_select < 4){
+        slide_select ++;
+    }
+    slider_images_2[slide_select].classList.add('focus');
+}
+
+function image_select_prev_2() {
+    slider_images_2[slide_select].classList.remove('focus');
+    if ( slide_select > 0) {
+        slide_select -= 1;
+    }
+    slider_images_2[slide_select].classList.add('focus');
+    console.log('ça appelle prev');
+}
+
+/* Fonctions dédoublé avec les noms qui correspondent à la troisième gallerie */
+
+function next_slide_3() {
+    if ( slider_3.style.transform != "translateX(-289.5vh)" ) {
+        slide_value -= 96.5
+        console.log('next');
+        slider_3.style.transform = "translateX(" + slide_value + "vh)"
+        image_select_next_3()
+    }
+}
+
+function prev_slide_3() {
+    if (slider_3.style.transform != "translateX(0vh)") {
+        slide_value += 96.5
+        console.log('prev');
+        slider_3.style.transform = "translateX(" + slide_value + "vh)"
+        image_select_prev_3()
+    }
+}
+
+function image_select_next_3() {
+    console.log('ça appelle next');
+    slider_images_3[slide_select].classList.remove('focus');
+    if (slide_select < 4){
+        slide_select ++;
+    }
+    slider_images_3[slide_select].classList.add('focus');
+}
+
+function image_select_prev_3() {
+    slider_images_3[slide_select].classList.remove('focus');
+    if ( slide_select > 0) {
+        slide_select -= 1;
+    }
+    slider_images_3[slide_select].classList.add('focus');
     console.log('ça appelle prev');
 }

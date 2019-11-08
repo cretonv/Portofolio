@@ -718,8 +718,9 @@ a#button2:hover {
     opacity: 0.3;
 }
 
+/* Classe CSS utilisé pour la mise en valeur de la bonne image */
 .focus {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 /*.img1 {
@@ -799,4 +800,56 @@ a#button2:hover {
 .link-unsplash:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* Règles CSS pour changer de gallerie d'images en fonction du choix de l'utilisateur */
+
+.hidden {
+    display: none
+}
+
+/* Règles copier de la première gallerie mais avec les noms modifiés pour la seconde gallerie */
+
+.gallerie-2 {
+    height: 70vh;
+    line-height: 70vh;
+    width: 19750px;
+    transition: transform 1s, opacity 1s;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow: auto;*/
+}
+
+.gallerie-img-2 {
+    position: relative;
+    float: left;
+    height: 55vh;
+    width: 85vh;
+    margin: 7.5vh 45px;
+    opacity: 0.3;
+}
+
+/* Règles copier de la première gallerie mais avec les noms modifiés pour la troisième gallerie */
+
+.gallerie-3 {
+    height: 70vh;
+    line-height: 70vh;
+    width: 19750px;
+    transition: transform 1s, opacity 1s;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow: auto;*/
+}
+
+.gallerie-img-3 {
+    position: relative;
+    float: left;
+    height: 55vh;
+    width: 85vh;
+    margin: 7.5vh 45px;
+    opacity: 0.3;
 }
