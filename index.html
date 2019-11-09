@@ -198,80 +198,115 @@
                 <div class="col-2"></div>
             </div>
 
-            <div id="gallerie-Irlande" class="row affichage-zone">
-                <div class="col-3" style="z-index: 1003;">
-                    <div class="gallery-name">
-                        <span>
-                            Irlande
-                            <span class="gallery-number">01</span>
-                        </span>
+            <div id="galleries">
+
+                <div id="gallerie-Irlande" class="row affichage-zone">
+                    <div class="col-3" style="z-index: 1003;">
+                        <div class="gallery-name">
+                            <span>
+                                Irlande
+                                <span class="gallery-number">01</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="gallerie center" style="transform: translateX(0vh);">
+                            <img class="gallerie-img center-me position0 focus" alt="photo" src="./images/Irlande/Irlande1.jpg"/>
+                            <img class="gallerie-img center-me position1" alt="photo" src="./images/Irlande/Irlande2.jpg"/>
+                            <img class="gallerie-img center-me position2" alt="photo" src="./images/Irlande/Irlande3.jpg"/>
+                            <img class="gallerie-img center-me position3" alt="photo" src="./images/Irlande/Irlande4.jpg"/>
+                        </div>
+                        <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide()">
+                        <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide()">
+                    </div>
+                    <div class="col-12">
+                        <div class="center unsplash-zone">
+                            <a class="no-link link-unsplash" href="https://unsplash.com/collections/8885718/irlande/1ab8633c2b73b529fa467b2059af53c7" target="_blank"> EN DÉCOUVRIR PLUS</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-9">
-                    <div class="gallerie center" style="transform: translateX(0vh);">
-                        <img class="gallerie-img center-me position0 focus" alt="photo" src="./images/Irlande/Irlande1.jpg"/>
-                        <img class="gallerie-img center-me position1" alt="photo" src="./images/Irlande/Irlande2.jpg"/>
-                        <img class="gallerie-img center-me position2" alt="photo" src="./images/Irlande/Irlande3.jpg"/>
-                        <img class="gallerie-img center-me position3" alt="photo" src="./images/Irlande/Irlande4.jpg"/>
+
+                <div id="gallerie-Londres" class="row affichage-zone hidden">
+                    <div class="col-3" style="z-index: 1003;">
+                        <div class="gallery-name">
+                            <span>
+                                Londres
+                                <span class="gallery-number">02</span>
+                            </span>
+                        </div>
                     </div>
-                    <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide()">
-                    <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide()">
-                </div>
-                <div class="col-12">
-                    <div class="center unsplash-zone">
-                        <a class="no-link link-unsplash" href="https://unsplash.com/collections/8885718/irlande/1ab8633c2b73b529fa467b2059af53c7" target="_blank"> EN DÉCOUVRIR PLUS</a>
+                    <div class="col-9">
+                        <div class="gallerie-2 center" style="transform: translateX(0vh);">
+                            <img class="gallerie-img-2 center-me position0 focus" alt="photo" src="./images/Londres/Londres1.jpg"/>
+                            <img class="gallerie-img-2 center-me position1" alt="photo" src="./images/Londres/Londres2.jpg"/>
+                            <img class="gallerie-img-2 center-me position2" alt="photo" src="./images/Londres/Londres3.jpg"/>
+                            <img class="gallerie-img-2 center-me position3" alt="photo" src="./images/Londres/Londres4.jpg"/>
+                        </div>
+                        <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_2()">
+                        <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_2()">
+                    </div>
+                    <div class="col-12">
+                        <div class="center unsplash-zone">
+                            <a class="no-link link-unsplash" href="#" target="_blank"> EN DÉCOUVRIR PLUS</a>
+                        </div>
                     </div>
                 </div>
+
+                <div id="gallerie-Divers" class="row affichage-zone hidden">
+                    <div class="col-3" style="z-index: 1003;">
+                        <div class="gallery-name">
+                            <span>
+                                Divers
+                                <span class="gallery-number">03</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="gallerie-3 center" style="transform: translateX(0vh);">
+                            <img class="gallerie-img-3 center-me position0 focus" alt="photo" src="./images/Divers/Divers1.JPG"/>
+                            <img class="gallerie-img-3 center-me position1" alt="photo" src="./images/Divers/Divers2.JPG"/>
+                            <img class="gallerie-img-3 center-me position2" alt="photo" src="./images/Divers/Divers3.JPG"/>
+                            <img class="gallerie-img-3 center-me position3" alt="photo" src="./images/Divers/Divers4.JPG"/>
+                        </div>
+                        <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_3()">
+                        <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_3()">
+                    </div>
+                    <div class="col-12">
+                        <div class="center unsplash-zone">
+                            <a class="no-link link-unsplash" href="#" target="_blank"> EN DÉCOUVRIR PLUS</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div id="gallerie-Londres" class="row affichage-zone hidden">
-                <div class="col-3" style="z-index: 1003;">
-                    <div class="gallery-name">
-                        <span>
-                            Londres
-                            <span class="gallery-number">02</span>
-                        </span>
+            <div id="mosaiques" class="hidden">
+                <div id="mosaique-Irlande" class="row affichage-zone">
+                    <div class="col-3" style="z-index: 1003;">
+                        <div class="gallery-name">
+                            <span>
+                                Irlande
+                                <span class="gallery-number">01</span>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-9">
-                    <div class="gallerie-2 center" style="transform: translateX(0vh);">
-                        <img class="gallerie-img-2 center-me position0 focus" alt="photo" src="./images/Londres/Londres1.jpg"/>
-                        <img class="gallerie-img-2 center-me position1" alt="photo" src="./images/Londres/Londres2.jpg"/>
-                        <img class="gallerie-img-2 center-me position2" alt="photo" src="./images/Londres/Londres3.jpg"/>
-                        <img class="gallerie-img-2 center-me position3" alt="photo" src="./images/Londres/Londres4.jpg"/>
-                    </div>
-                    <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_2()">
-                    <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_2()">
-                </div>
-                <div class="col-12">
-                    <div class="center unsplash-zone">
-                        <a class="no-link link-unsplash" href="#" target="_blank"> EN DÉCOUVRIR PLUS</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="gallerie-Divers" class="row affichage-zone hidden">
-                <div class="col-3" style="z-index: 1003;">
-                    <div class="gallery-name">
-                        <span>
-                            Divers
-                            <span class="gallery-number">03</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-9">
-                    <div class="gallerie-3 center" style="transform: translateX(0vh);">
-                        <img class="gallerie-img-3 center-me position0 focus" alt="photo" src="./images/Divers/Divers1.JPG"/>
-                        <img class="gallerie-img-3 center-me position1" alt="photo" src="./images/Divers/Divers2.JPG"/>
-                        <img class="gallerie-img-3 center-me position2" alt="photo" src="./images/Divers/Divers3.JPG"/>
-                        <img class="gallerie-img-3 center-me position3" alt="photo" src="./images/Divers/Divers4.JPG"/>
-                    </div>
-                    <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_3()">
-                    <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_3()">
-                </div>
-                <div class="col-12">
-                    <div class="center unsplash-zone">
-                        <a class="no-link link-unsplash" href="#" target="_blank"> EN DÉCOUVRIR PLUS</a>
+                    <div class="col-9">
+                        <div class="mosaique center" style="transform: translateX(0vh);">
+                            <div class="row">
+                                <div class="col-6 no-padding">
+                                <img class="mosaique-img center-me position0 focus" alt="photo" src="./images/Irlande/Irlande1.jpg"/>
+                                </div>
+                                <div class="col-6 no-padding">
+                                <img class="mosaique-img center-me position1" alt="photo" src="./images/Irlande/Irlande2.jpg"/>
+                                </div>
+                                <div class="col-6 no-padding">
+                                <img class="mosaique-img center-me position2" alt="photo" src="./images/Irlande/Irlande3.jpg"/>
+                                </div>
+                                <div class="col-6 no-padding">
+                                <img class="mosaique-img center-me position3" alt="photo" src="./images/Irlande/Irlande4.jpg"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

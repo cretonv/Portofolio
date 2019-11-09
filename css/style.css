@@ -11,6 +11,10 @@ li, ul {
     list-style: none;
 }
 
+.no-padding {
+    padding: 0;
+}
+
 .no-link {
     text-decoration: none;
     color: white;
@@ -723,26 +727,6 @@ a#button2:hover {
     opacity: 1 !important;
 }
 
-/*.img1 {
-    transform: translateX(0%);
-    z-index: 2001;
-}
-
-.img2 {
-    transform: translateX(110%);
-    z-index: 2001;
-}
-
-.img3 {
-    transform: translateX(220%);
-    z-index: 2001;
-}
-
-.img4 {
-    transform: translateX(330%);
-    z-index: 2001;
-}*/
-
 /* Gère les classes CSS pour les commandes d'affichages de la gallerie */
 
 .prev-control {
@@ -852,4 +836,19 @@ a#button2:hover {
     width: 85vh;
     margin: 7.5vh 45px;
     opacity: 0.3;
+}
+
+/* Règles concernant l'affichage de la première mosaïque */
+
+.mosaique {
+    margin-top: 5vh;
+    height: 65vh;
+    /*line-height: 75vh;*/
+}
+
+.mosaique-img {
+    height: auto;
+    max-height: 32.5vh;
+    max-width: 100%;
+    margin-bottom: 4vh;
 }

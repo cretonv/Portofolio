@@ -55,6 +55,8 @@ var gallerie_Londres = document.querySelector('#gallerie-Londres');
 var gallerie_Divers = document.querySelector('#gallerie-Divers');
 var gallerie_active = 1;
 
+var mosaiques = document.querySelector('#mosaiques')
+var galleries = document.querySelector("#galleries")
 
 
 function burger_action(){
@@ -156,6 +158,9 @@ function display_action(choix) {
 
         display_container2.classList.remove("display-container-active");
         display_container1.classList.add("display-container-active")
+
+        galleries.classList.add("hidden")
+        mosaiques.classList.remove("hidden")
     }
     else if (choix == 2) {
         display_underline2.classList.add("display-underline-active");
@@ -163,6 +168,9 @@ function display_action(choix) {
 
         display_container2.classList.add("display-container-active");
         display_container1.classList.remove("display-container-active")
+
+        mosaiques.classList.add("hidden")
+        galleries.classList.remove("hidden")
     }
 
 }
