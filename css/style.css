@@ -1,4 +1,5 @@
 header, #menu { overflow-y: hidden; }
+/* overflow-y: scroll; */
 
 #home-container {
     background-image: url("../images/home.jpg");
@@ -517,6 +518,21 @@ a#button2:hover {
     top: 7vh;
     left: 2vh;
     font-size: 3vh;
+}
+
+#unsplash {
+    position: absolute;
+    top: 12.5vh;
+    left: 2vh;
+    height: 3vh;
+    width:auto;
+    /*background-image: url("../images/logo_unsplash.png");
+    background-position: center;
+    background-size: cover;*/
+}
+
+#unsplash-logo {
+    height: 3vh;
 }
 
 /* ------------------------------------------------------------------ */

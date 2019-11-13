@@ -58,6 +58,10 @@ var gallerie_active = 1;
 var mosaiques = document.querySelector('#mosaiques')
 var galleries = document.querySelector("#galleries")
 
+var mosaique_Irlande = document.querySelector('#mosaique-Irlande')
+var mosaique_Londres = document.querySelector('#mosaique-Londres')
+var mosaique_Divers = document.querySelector('#mosaique-Divers')
+
 
 function burger_action(){
 
@@ -263,7 +267,10 @@ function Irlande_view() {
         slider.style.transform = "translateX(" + slide_value + "vh)"
         gallerie_Londres.classList.add('hidden');
         gallerie_Divers.classList.add('hidden');
+        mosaique_Londres.classList.add('hidden');
+        mosaique_Divers.classList.add('hidden');
         gallerie_Irlande.classList.remove('hidden');
+        mosaique_Irlande.classList.remove('hidden');
         gallerie_active = 1;
     }
 }
@@ -279,7 +286,10 @@ function Londres_view() {
         slider_2.style.transform = "translateX(" + slide_value + "vh)"
         gallerie_Irlande.classList.add('hidden');
         gallerie_Divers.classList.add('hidden');
+        mosaique_Irlande.classList.add('hidden');
+        mosaique_Divers.classList.add('hidden');
         gallerie_Londres.classList.remove('hidden');
+        mosaique_Londres.classList.remove('hidden');
         gallerie_active = 2;
     }
 }
@@ -295,7 +305,10 @@ function Divers_view() {
         slider_3.style.transform = "translateX(" + slide_value + "vh)"
         gallerie_Irlande.classList.add('hidden');
         gallerie_Londres.classList.add('hidden');
+        mosaique_Londres.classList.add('hidden');
+        mosaique_Irlande.classList.add('hidden');
         gallerie_Divers.classList.remove('hidden');
+        mosaique_Divers.classList.remove('hidden');
         gallerie_active = 3;
     }
 }
