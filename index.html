@@ -174,7 +174,7 @@
 
 
     <div id="photos">
-        <div class="container-fluid">
+        <div id="photos-back" class="container-fluid">
             <div class="row nav-line">
                 <div class="col-3 center" onclick="Irlande_view()"> <span class="nav-item"> Irlande </span> </div>
                 <div class="col-3 center" onclick="Londres_view()"> <span class="nav-item"> Londres </span> </div>
@@ -291,16 +291,16 @@
                         <div class="mosaique center" style="transform: translateX(0vh);">
                             <div class="row">
                                 <div class="col-6 no-padding">
-                                <img class="mosaique-img center-me position0 focus" alt="photo" src="./images/Irlande/Irlande1.jpg"/>
+                                <img class="mosaique-img center-me position0 focus" alt="photo" src="./images/Irlande/Irlande1.jpg" onclick="zoom('zoom-irlande1', 'overlay-irlande1')"/>
                                 </div>
                                 <div class="col-6 no-padding">
-                                <img class="mosaique-img center-me position1" alt="photo" src="./images/Irlande/Irlande2.jpg"/>
+                                <img class="mosaique-img center-me position1" alt="photo" src="./images/Irlande/Irlande2.jpg" onclick="zoom('zoom-irlande2', 'overlay-irlande2'/*, 'zoom-border-top-irlande2'*/)"/>
                                 </div>
                                 <div class="col-6 no-padding">
-                                <img class="mosaique-img center-me position2" alt="photo" src="./images/Irlande/Irlande3.jpg"/>
+                                <img class="mosaique-img center-me position2" alt="photo" src="./images/Irlande/Irlande3.jpg" onclick="zoom('zoom-irlande3', 'overlay-irlande3')"/>
                                 </div>
                                 <div class="col-6 no-padding">
-                                <img class="mosaique-img center-me position3" alt="photo" src="./images/Irlande/Irlande4.jpg"/>
+                                <img class="mosaique-img center-me position3" alt="photo" src="./images/Irlande/Irlande4.jpg" onclick="zoom('zoom-irlande4', 'overlay-irlande4')"/>
                                 </div>
                             </div>
                         </div>
@@ -320,16 +320,16 @@
                             <div class="mosaique center" style="transform: translateX(0vh);">
                                 <div class="row">
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position0 focus" alt="photo" src="./images/Londres/Londres1.jpg"/>
+                                        <img class="mosaique-img center-me position0 focus" alt="photo" src="./images/Londres/Londres1.jpg" onclick="zoom('zoom-londres1', 'overlay-londres1')"/>
                                     </div>
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position1" alt="photo" src="./images/Londres/Londres2.jpg"/>
+                                        <img class="mosaique-img center-me position1" alt="photo" src="./images/Londres/Londres2.jpg" onclick="zoom('zoom-londres2', 'overlay-londres2')"/>
                                     </div>
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position2" alt="photo" src="./images/Londres/Londres3.jpg"/>
+                                        <img class="mosaique-img center-me position2" alt="photo" src="./images/Londres/Londres3.jpg" onclick="zoom('zoom-londres3', 'overlay-londres3')"/>
                                     </div>
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position3" alt="photo" src="./images/Londres/Londres4.jpg"/>
+                                        <img class="mosaique-img center-me position3" alt="photo" src="./images/Londres/Londres4.jpg" onclick="zoom('zoom-londres4', 'overlay-londres4')"/>
                                     </div>
                                 </div>
                             </div>
@@ -349,16 +349,16 @@
                             <div class="mosaique center" style="transform: translateX(0vh);">
                                 <div class="row">
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position0 focus" alt="photo" src="./images/Divers/Divers1.JPG"/>
+                                        <img class="mosaique-img center-me position0 focus" alt="photo" src="./images/Divers/Divers1.JPG" onclick="zoom('zoom-divers1', 'overlay-divers1')"/>
                                     </div>
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position1" alt="photo" src="./images/Divers/Divers2.JPG"/>
+                                        <img class="mosaique-img center-me position1" alt="photo" src="./images/Divers/Divers2.JPG" onclick="zoom('zoom-divers2', 'overlay-divers2')"/>
                                     </div>
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position2" alt="photo" src="./images/Divers/Divers3.JPG"/>
+                                        <img class="mosaique-img center-me position2" alt="photo" src="./images/Divers/Divers3.JPG" onclick="zoom('zoom-divers3', 'overlay-divers3')"/>
                                     </div>
                                     <div class="col-6 no-padding">
-                                        <img class="mosaique-img center-me position3" alt="photo" src="./images/Divers/Divers4.JPG"/>
+                                        <img class="mosaique-img center-me position3" alt="photo" src="./images/Divers/Divers4.JPG" onclick="zoom('zoom-divers4', 'overlay-divers4')"/>
                                     </div>
                                 </div>
                             </div>
@@ -367,6 +367,21 @@
 
                 </div>
             </div>
+
+            <div id="overlay-irlande1" class="overlay hidden" onclick="dezoom('zoom-irlande1', 'overlay-irlande1')"> <div id="zoom-irlande1" class="zoom-img hidden"  style="background-image: url('./images/Irlande/Irlande1.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-irlande1', 'overlay-irlande1')"></div></div>
+            <div id="overlay-irlande2" class="overlay hidden" onclick="dezoom('zoom-irlande2', 'overlay-irlande2')"><div id="zoom-irlande2" class="zoom-img hidden"  style="background-image: url('./images/Irlande/Irlande2.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-irlande2', 'overlay-irlande2')"><!--<div id="zoom-border-top-irlande2" class="zoom-border zoom-border-top"></div> <div class="zoom-border zoom-border-bottom"></div> --></div></div>
+            <div id="overlay-irlande3" class="overlay hidden" onclick="dezoom('zoom-irlande3', 'overlay-irlande3')"> <div id="zoom-irlande3" class="zoom-img hidden"  style="background-image: url('./images/Irlande/Irlande3.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-irlande3', 'overlay-irlande3')"></div></div>
+            <div id="overlay-irlande4" class="overlay hidden" onclick="dezoom('zoom-irlande4', 'overlay-irlande4')"> <div id="zoom-irlande4" class="zoom-img hidden"  style="background-image: url('./images/Irlande/Irlande4.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-irlande4', 'overlay-irlande4')"></div></div>
+
+            <div id="overlay-londres1" class="overlay hidden" onclick="dezoom('zoom-londres1', 'overlay-londres1')"> <div id="zoom-londres1" class="zoom-img hidden"  style="background-image: url('./images/Londres/Londres1.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-londres1', 'overlay-londres1')"></div></div>
+            <div id="overlay-londres2" class="overlay hidden" onclick="dezoom('zoom-londres2', 'overlay-londres2')"><div id="zoom-londres2" class="zoom-img hidden"  style="background-image: url('./images/Londres/Londres2.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-londres2', 'overlay-londres2')"></div></div>
+            <div id="overlay-londres3" class="overlay hidden" onclick="dezoom('zoom-londres3', 'overlay-londres3')"> <div id="zoom-londres3" class="zoom-img hidden"  style="background-image: url('./images/Londres/Londres3.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-londres3', 'overlay-londres3')"></div></div>
+            <div id="overlay-londres4" class="overlay hidden" onclick="dezoom('zoom-londres4', 'overlay-londres4')"> <div id="zoom-londres4" class="zoom-img hidden"  style="background-image: url('./images/Londres/Londres4.jpg'); background-position: center; background-size: cover;" onclick="dezoom('zoom-londres4', 'overlay-londres4')"></div></div>
+
+            <div id="overlay-divers1" class="overlay hidden" onclick="dezoom('zoom-divers1', 'overlay-divers1')"> <div id="zoom-divers1" class="zoom-img hidden"  style="background-image: url('./images/Divers/Divers1.JPG'); background-position: center; background-size: cover;" onclick="dezoom('zoom-divers1', 'overlay-divers1')"></div></div>
+            <div id="overlay-divers2" class="overlay hidden" onclick="dezoom('zoom-divers2', 'overlay-divers2')"> <div id="zoom-divers2" class="zoom-img hidden"  style="background-image: url('./images/Divers/Divers2.JPG'); background-position: center; background-size: cover;" onclick="dezoom('zoom-divers2', 'overlay-divers2')"></div></div>
+            <div id="overlay-divers3" class="overlay hidden" onclick="dezoom('zoom-divers3', 'overlay-divers3')"> <div id="zoom-divers3" class="zoom-img hidden"  style="background-image: url('./images/Divers/Divers3.JPG'); background-position: center; background-size: cover;" onclick="dezoom('zoom-divers3', 'overlay-divers3')"></div></div>
+            <div id="overlay-divers4" class="overlay hidden" onclick="dezoom('zoom-divers4', 'overlay-divers4')"> <div id="zoom-divers4" class="zoom-img hidden"  style="background-image: url('./images/Divers/Divers4.JPG'); background-position: center; background-size: cover;" onclick="dezoom('zoom-divers4', 'overlay-divers4')"></div></div>
         </div>
 
 </body>

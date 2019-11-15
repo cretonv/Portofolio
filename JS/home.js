@@ -62,6 +62,12 @@ var mosaique_Irlande = document.querySelector('#mosaique-Irlande')
 var mosaique_Londres = document.querySelector('#mosaique-Londres')
 var mosaique_Divers = document.querySelector('#mosaique-Divers')
 
+var photo_back = document.querySelector('#photos-back')
+var photos_zoom = document.querySelectorAll(".zoom-img")
+
+var zoom_indicator = false;
+
+
 
 function burger_action(){
 
@@ -388,3 +394,30 @@ function image_select_prev_3() {
     slider_images_3[slide_select].classList.add('focus');
     console.log('ça appelle prev');
 }
+
+/* Fonction qui dois gérer le zoom */
+
+function zoom(a, b) {
+    console.log('#' + a)
+    var img_zoom = document.querySelector('#' + a)
+    var ovr_zoom = document.querySelector('#' + b)
+    var border_top = document.querySelector('#' + c);
+
+    img_zoom.classList.remove('hidden');
+    ovr_zoom.classList.remove('hidden');
+    photo_back.classList.add('photo-back-low-opacity');
+    zoom_indicator = true;
+
+    /*border_top.classList.add('zoom-border-top-apparition');*/
+}
+
+function dezoom(a, b) {
+    console.log('#' + a)
+    var img_zoom = document.querySelector('#' + a)
+    var ovr_zoom = document.querySelector('#' + b)
+    img_zoom.classList.add('hidden');
+    ovr_zoom.classList.add('hidden');
+    photo_back.classList.remove('photo-back-low-opacity');
+    zoom_indicator = false;
+}
+

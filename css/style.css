@@ -197,7 +197,7 @@ img {
 }
 
 
-.burger-border, .menu-border {                /* Style des bordures */
+.burger-border, .menu-border, .zoom-border {                /* Style des bordures */
     box-sizing: border-box;
     position: absolute;
     opacity: 0.5;
@@ -632,7 +632,7 @@ a#button2:hover {
 /* Animation pour les boutons de la page photograhpies dans la partie display */
 
 .display-container {
-    margin-top: 6vh;
+    margin-top: 3.5vh;
     margin-bottom: 2vh;
     padding: 3px;
     text-align: center;
@@ -648,7 +648,7 @@ a#button2:hover {
 }
 
 .display-container-active {
-    margin-top: 6vh;
+    margin-top: 3.5vh;
     margin-bottom: 2vh;
     padding: 3px;
     text-align: center;
@@ -867,4 +867,54 @@ a#button2:hover {
     max-height: 32.5vh;
     max-width: 100%;
     margin-bottom: 4vh;
+    cursor: zoom-in;
+}
+
+/* Règles pour le zoom sur une image dans la rubirque photo */
+
+.zoom-img {
+    height: 95vh;
+    width: 75vw;
+    z-index: 2002;
+    cursor: zoom-out;
+    position: fixed;
+    top: 2.5vh;
+    left: 12.5vw;
+    overflow: hidden;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.photo-back-low-opacity {
+    opacity:0.3;
+}
+
+.zoom-border-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+    opacity: 0.7;
+    transform: translateX(100vh);
+    transition: all 5s 5s;
+}
+
+.zoom-border-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+    opacity: 0.7;
+}
+
+.zoom-border-top-apparition {
+    transform: translateX(0vh);
 }
