@@ -548,7 +548,7 @@ a#button2:hover {
     right: 0;
     bottom: 0;
     width: 0;
-    z-index: 1000;
+    z-index: 2000;
     background: black;
     height: 100vh;
     transition: all 0.7s ease-out 0.7s;
@@ -560,7 +560,109 @@ a#button2:hover {
     width: 100vw;
 }
 
+.realisations-lignes-vides {
+    height: 15vh;
+}
 
+.espace-lat{
+    height: 35vh;
+    overflow: hidden;
+}
+
+.real-content{
+    height: 70vh;
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------------------ */
+/* Règles CSS pour l'animation et la création des bordures de la page */
+
+.lat-border {                /* Style des bordures */
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.lat-border-bottom {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background: white;
+}
+
+.lat-border-right {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: white;
+    transition: all 0.5s 2s;
+}
+
+.lat-border-left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: white;
+    transition: all 0.5s 2s;
+}
+
+.lat-border-middle-bottom {
+     right: 0;
+     left: 0;
+     bottom: 0;
+     height: 1px;
+     background: white;
+     transition: all 0.5s 2.5s;
+    transform: translateX(150vh);
+ }
+
+.lat-border-middle-top {
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background: white;
+    transition: all 0.5s 2.5s;
+    transform: translateX(-150vh);
+}
+
+.lat-border-bottom-left {
+    transform: translateX(-100vh);
+    transition: all 0.5s 1.5s;
+}
+
+.lat-border-bottom-right {
+    transform: translateX(100vh);
+    transition: all 0.5s 1.5s;
+}
+
+.lat-border-left-top {
+    transform: translateY(50vh);
+}
+
+.lat-border-left-bottom {
+    transform: translateY(-50vh);
+}
+
+.lat-border-right-top {
+    transform: translateY(50vh);
+}
+
+.lat-border-right-bottom {
+    transform: translateY(-50vh);
+}
+
+.x-apparition {
+    transform: translateX(0vh);
+}
+
+.y-apparition {
+    transform: translateY(0vh);
+}
 
 
 /* ------------------------------------------------------------------ */

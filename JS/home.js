@@ -67,7 +67,24 @@ var photos_zoom = document.querySelectorAll(".zoom-img")
 
 var zoom_indicator = false;
 
+/* variables de la page réalisations */
 
+var left_bar_real = document.querySelector('.lat-border-bottom-left')
+var right_bar_real = document.querySelector('.lat-border-bottom-right')
+
+var left_top_bar_real = document.querySelector('.lat-border-left-top')
+var left_bottom_bar_real = document.querySelector('.lat-border-left-bottom')
+
+var right_top_bar_real = document.querySelector('.lat-border-right-top')
+var right_bottom_bar_real = document.querySelector('.lat-border-right-bottom')
+
+var top_middle_bar_real = document.querySelector('.lat-border-middle-top')
+var bottom_middle_bar_real = document.querySelector('.lat-border-middle-bottom')
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+/*-------------------------- PARTIE FONCTION --------------------------------*/
 
 function burger_action(){
 
@@ -135,10 +152,21 @@ function realisations_access() {
     burger_animation()                                  // animation du bouton burger
 
     menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
+    photos.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page photo si elle était ouverte
 
     realisations.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
+    left_bar_real.classList.add('x-apparition')
+    right_bar_real.classList.add('x-apparition')
 
+    left_top_bar_real.classList.add('y-apparition')
+    left_bottom_bar_real.classList.add('y-apparition')
+
+    right_top_bar_real.classList.add('y-apparition')
+    right_bottom_bar_real.classList.add('y-apparition')
+
+    top_middle_bar_real.classList.add('x-apparition')
+    bottom_middle_bar_real.classList.add('x-apparition')
 
     menu.open = false                                       // On met à jour l'indicateur d'état
 }
@@ -153,6 +181,7 @@ function photos_access() {
     burger_animation()                                  // animation du bouton burger
 
     menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
+    realisations.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page reéalisations si elle était ouverte
 
     photos.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
@@ -401,7 +430,6 @@ function zoom(a, b) {
     console.log('#' + a)
     var img_zoom = document.querySelector('#' + a)
     var ovr_zoom = document.querySelector('#' + b)
-    var border_top = document.querySelector('#' + c);
 
     img_zoom.classList.remove('hidden');
     ovr_zoom.classList.remove('hidden');
