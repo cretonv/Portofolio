@@ -617,7 +617,7 @@ a#button2:hover {
      height: 1px;
      background: white;
      transition: all 0.5s 2.5s;
-    transform: translateX(150vh);
+    transform: translateX(200vh);
  }
 
 .lat-border-middle-top {
@@ -627,7 +627,7 @@ a#button2:hover {
     height: 1px;
     background: white;
     transition: all 0.5s 2.5s;
-    transform: translateX(-150vh);
+    transform: translateX(-200vh);
 }
 
 .lat-border-bottom-left {
@@ -664,6 +664,69 @@ a#button2:hover {
     transform: translateY(0vh);
 }
 
+/* ------------------------------------------------------------------ */
+/* Règles CSS pour l'affichage des différentes catégories */
+
+.real-category {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: 50vh;
+    opacity: 0;
+    transition: all 0.5s 3s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.catégorie-img {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.real-category:hover .catégorie-img{
+    opacity: 0.4;
+}
+
+.catégorie-name {
+    color: white;
+    font-size: 3vh;
+    transform: translateY(-60vh);
+    transition: all 0.7s;
+    cursor: pointer;
+}
+
+.real-category:hover .catégorie-name{
+    transform: translateY(-28.5vh);
+    transition: all 0.7s;
+}
+
+#production-web {
+    padding-left: 7.5vw;
+    padding-right: 2.5vw;
+}
+
+#production-av {
+    padding-right: 7.5vw;
+    padding-left: 2.5vw;
+}
+
+#web-img {
+    background-image: url('../images/home.jpg');
+}
+
+#graph-img {
+    background-image: url('../images/home.jpg');
+}
+
+#av-img {
+    background-image: url('../images/home.jpg');
+}
 
 /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */

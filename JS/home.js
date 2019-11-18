@@ -81,6 +81,8 @@ var right_bottom_bar_real = document.querySelector('.lat-border-right-bottom')
 var top_middle_bar_real = document.querySelector('.lat-border-middle-top')
 var bottom_middle_bar_real = document.querySelector('.lat-border-middle-bottom')
 
+var real_category = document.querySelectorAll('.real-category')
+
 /*------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------*/
@@ -167,6 +169,11 @@ function realisations_access() {
 
     top_middle_bar_real.classList.add('x-apparition')
     bottom_middle_bar_real.classList.add('x-apparition')
+
+    for(var i = 0; i < real_category.length; i++){
+        real_category[i].classList.add('opacity');
+        console.log("ça marche po")
+    }
 
     menu.open = false                                       // On met à jour l'indicateur d'état
 }
