@@ -197,7 +197,7 @@ img {
 }
 
 
-.burger-border, .menu-border, .zoom-border {                /* Style des bordures */
+.burger-border, .menu-border, .zoom-border{                /* Style des bordures */
     box-sizing: border-box;
     position: absolute;
     opacity: 0.5;
@@ -1083,3 +1083,109 @@ a#button2:hover {
 .zoom-border-top-apparition {
     transform: translateX(0vh);
 }
+
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+
+/* Les règles CSS suivantes concernent les pages créa */
+
+.home-crea {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.bloc-vide {
+    height: 8.33vh;
+}
+
+.bloc-content{
+    height: 83.34vh;
+}
+
+.crea-border {                /* Style des bordures */
+    position: absolute;
+    opacity: 0.5;
+}
+
+.bloc-border-bottom {
+    bottom: 6vh;
+    left: 95vw;
+    right: 5vw;
+    height: 1px;
+    background: white;
+    opacity: 0.7;
+    transition: all 0.5s;
+    animation: appear-bottom 0.5s 0.5s both;
+}
+
+.bloc-border-right {
+    bottom: 94vh;
+    top: 6vh;
+    right: 5vw;
+    width: 1px;
+    background: white;
+    opacity: 0.7;
+    transition: all 0.5s;
+    animation: appear-right 0.5s both;
+}
+
+.bloc-border-left {
+    bottom: 6vh;
+    top: 6vh;
+    left: 5vw;
+    width: 1px;
+    background: white;
+    opacity: 0.7;
+    transition: all 0.5s;
+    animation: appear-left 0.5s 1s both;
+}
+
+.bloc-border-top {
+    top: 6vh;
+    left: 5vw;
+    right: 95vw;
+    height: 1px;
+    background: white;
+    opacity: 0.7;
+    transition: all 0.5s;
+    animation: appear-top 0.5s 1.5s both;
+}
+
+@keyframes appear-top {
+    from {
+        right: 95vw;
+    } to {
+        right: 5vw;
+    }
+}
+
+@keyframes appear-right {
+    from {
+        bottom: 94vh;
+    } to {
+        bottom: 6vh;
+    }
+}
+
+@keyframes appear-bottom {
+    from {
+        left: 95vw;
+    } to {
+        left: 5vw;
+    }
+}
+
+@keyframes appear-left {
+    from {
+        top: 94vh;
+    } to {
+        top: 6vh;
+    }
+}
+
+
+
