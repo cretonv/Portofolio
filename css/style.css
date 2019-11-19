@@ -52,6 +52,10 @@ img {
     padding: 0;
 }
 
+.max-taille{
+    height: 100vh;
+}
+
 .opacity {                  /*Permet de remettre l'opacité sur des éléments avec le js*/
     opacity: 1 !important;
 }
@@ -1104,7 +1108,21 @@ a#button2:hover {
 
 .bloc-content{
     height: 83.34vh;
+    opacity: 0;
+    animation: appear-content 0.5s 2s both;
+    transition: all 0.5s;
 }
+
+@keyframes appear-content {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* Création ud cadre et animation de celui-ci */
 
 .crea-border {                /* Style des bordures */
     position: absolute;
@@ -1113,8 +1131,8 @@ a#button2:hover {
 
 .bloc-border-bottom {
     bottom: 6vh;
-    left: 95vw;
-    right: 5vw;
+    left: 96vw;
+    right: 4vw;
     height: 1px;
     background: white;
     opacity: 0.7;
@@ -1125,7 +1143,7 @@ a#button2:hover {
 .bloc-border-right {
     bottom: 94vh;
     top: 6vh;
-    right: 5vw;
+    right: 4vw;
     width: 1px;
     background: white;
     opacity: 0.7;
@@ -1136,7 +1154,7 @@ a#button2:hover {
 .bloc-border-left {
     bottom: 6vh;
     top: 6vh;
-    left: 5vw;
+    left: 4vw;
     width: 1px;
     background: white;
     opacity: 0.7;
@@ -1146,8 +1164,8 @@ a#button2:hover {
 
 .bloc-border-top {
     top: 6vh;
-    left: 5vw;
-    right: 95vw;
+    left: 4vw;
+    right: 96vw;
     height: 1px;
     background: white;
     opacity: 0.7;
@@ -1157,9 +1175,9 @@ a#button2:hover {
 
 @keyframes appear-top {
     from {
-        right: 95vw;
+        right: 96vw;
     } to {
-        right: 5vw;
+        right: 4vw;
     }
 }
 
@@ -1173,9 +1191,9 @@ a#button2:hover {
 
 @keyframes appear-bottom {
     from {
-        left: 95vw;
+        left: 96vw;
     } to {
-        left: 5vw;
+        left: 4vw;
     }
 }
 
@@ -1187,5 +1205,50 @@ a#button2:hover {
     }
 }
 
+/* ------------------------------------------------------------------ */
+/* Styles des textes présents sur les pages */
 
+.crea-title {
+    font-size: 9.34vh;
+    color: white;
+   height: 10.34vh;
+    text-align: center;
+    margin-top: 3vh;
+}
 
+.crea-description {
+    color: white;
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+/* ------------------------------------------------------------------ */
+/* Styles des textes présents sur les pages */
+
+#home-fleche {
+    position: absolute;
+    height: 4vw;
+    width: 4vw;
+    bottom: 7.5vh;
+    right: 48vw;
+    left: 48vw;
+    transform: rotate(0.25turn);
+    opacity: 0.3;
+    cursor: pointer;
+    animation: appear-fleche 0.5s 2s backwards;
+}
+
+#home-fleche:hover {
+    opacity: 1;
+}
+
+@keyframes appear-fleche {
+    from{
+        opacity: 0;
+    } to {
+        opacity: 0.3;
+    }
+}
