@@ -1,3 +1,41 @@
+/* On créet ici les font-familly pour les typo utilisés sur le site */
+
+@font-face {
+    font-family: Raleway;
+    src: url("../lib/font/Raleway/Raleway-Medium.ttf");
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("../lib/font/Raleway/Raleway-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("../lib/font/Raleway/Raleway-SemiBold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../lib/font/Montserrat/Montserrat-Regular.otf");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../lib/font/Montserrat/Montserrat-SemiBold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../lib/font/Montserrat/Montserrat-Italic.otf");
+    font-style: italic;
+}
+
+/*-------------------—————————————————————————————————————————————————*/
+
 header, #menu { overflow-y: hidden; }
 /* overflow-y: scroll; */
 
@@ -66,7 +104,9 @@ img {
 
 .intertitre {
     height: 20vh;
-   }
+    font-family: Raleway;
+    font-weight: bold;
+}
 
 #home_portrait {
     border-radius: 100%;
@@ -335,6 +375,7 @@ a#button2:hover {
     height: 30vh;
     font-size: 1.5vh;
     margin-top: 3vh;
+    font-family: Montserrat;
 }
 
 /* ------------------------------------------------------------------ */
@@ -703,6 +744,7 @@ a#button2:hover {
     transform: translateY(-60vh);
     transition: all 0.7s;
     cursor: pointer;
+    font-family: Raleway;
 }
 
 .real-category:hover .catégorie-name{
@@ -772,6 +814,7 @@ a#button2:hover {
     display: inline-block;
     position: relative;
     opacity: 0.8;
+    font-family: Raleway;
 }
 
 .nav-item::after {
@@ -831,6 +874,8 @@ a#button2:hover {
     font-size: 6vh;
     margin-right: 3px;
     margin-left: 3px;
+    font-family: Raleway;
+    font-weight: bold;
 }
 
 .display-underline {
@@ -869,6 +914,8 @@ a#button2:hover {
     font-size: 4vh;
     text-align: center;
     z-index: 1003;
+    font-family: Raleway;
+    font-style: italic;
 }
 
 .gallery-number {
@@ -1097,7 +1144,6 @@ a#button2:hover {
 /* Les règles CSS suivantes concernent les pages créa */
 
 .home-crea {
-    height: 100vh;
     width: 100vw;
     background-color: black;
 }
@@ -1106,10 +1152,20 @@ a#button2:hover {
     height: 8.33vh;
 }
 
+.page-crea {
+    transition: all 0.5s;
+    height: 0;
+}
+
+.page-crea.open {
+    transition: all 0.5s;
+    height: 100vh;
+}
+
 .bloc-content{
     height: 83.34vh;
     opacity: 0;
-    animation: appear-content 0.5s 2s both;
+    animation: appear-content 0.5s 2.5s both;
     transition: all 0.5s;
 }
 
@@ -1137,7 +1193,7 @@ a#button2:hover {
     background: white;
     opacity: 0.7;
     transition: all 0.5s;
-    animation: appear-bottom 0.5s 0.5s both;
+    animation: appear-bottom 0.5s 1s both;
 }
 
 .bloc-border-right {
@@ -1148,7 +1204,7 @@ a#button2:hover {
     background: white;
     opacity: 0.7;
     transition: all 0.5s;
-    animation: appear-right 0.5s both;
+    animation: appear-right 0.5s 0.5s both;
 }
 
 .bloc-border-left {
@@ -1159,7 +1215,7 @@ a#button2:hover {
     background: white;
     opacity: 0.7;
     transition: all 0.5s;
-    animation: appear-left 0.5s 1s both;
+    animation: appear-left 0.5s 1.5s both;
 }
 
 .bloc-border-top {
@@ -1170,7 +1226,7 @@ a#button2:hover {
     background: white;
     opacity: 0.7;
     transition: all 0.5s;
-    animation: appear-top 0.5s 1.5s both;
+    animation: appear-top 0.5s 2s both;
 }
 
 @keyframes appear-top {
@@ -1209,11 +1265,13 @@ a#button2:hover {
 /* Styles des textes présents sur les pages */
 
 .crea-title {
+    font-family: Raleway;
     font-size: 9.34vh;
     color: white;
-   height: 10.34vh;
+    height: 10.34vh;
     text-align: center;
     margin-top: 3vh;
+    font-weight: bold;
 }
 
 .crea-description {
@@ -1223,6 +1281,8 @@ a#button2:hover {
     justify-content: center;
     flex-direction: column;
     margin-top: 3vh;
+    font-size: 2.15vh;
+    font-family: Montserrat;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1238,10 +1298,27 @@ a#button2:hover {
     transform: rotate(0.25turn);
     opacity: 0.3;
     cursor: pointer;
-    animation: appear-fleche 0.5s 2s backwards;
+    animation: appear-fleche 0.5s 2.5s backwards;
 }
 
 #home-fleche:hover {
+    opacity: 1;
+}
+
+.fleche {
+    position: absolute;
+    height: 4vw;
+    width: 4vw;
+    bottom: 7.5vh;
+    right: 48vw;
+    left: 48vw;
+    transform: rotate(0.25turn);
+    opacity: 0.3;
+    cursor: pointer;
+    animation: appear-fleche 0.5s 2.5s backwards;
+}
+
+.fleche:hover {
     opacity: 1;
 }
 
@@ -1251,4 +1328,92 @@ a#button2:hover {
     } to {
         opacity: 0.3;
     }
+}
+
+.titre-crea {
+    text-align: center;
+    height: 20vh;
+    font-max-size: 19vh;
+    font-size: 10vh;
+}
+
+.description-crea {
+    height: 53.34vh;
+}
+
+#qwwizzy-title {
+    color: white;
+    font-family: acier-bat-noir;
+    font-size: 6vw;
+}
+
+.qwwizzy-description {
+    color: white;
+    font-size: 0.895vw;
+    font-family: Montserrat;
+}
+
+#doors-title {
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 19vh;
+}
+
+.doors-description {
+    color: white;
+    font-size: 0.895vw;
+    font-family: Montserrat;
+}
+
+/* ------------------------------------------------------------------ */
+/* Styles des "pages" suivantes */
+
+#qwwizzy {
+    background-color: #377cd6;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#doors {
+    background-color: rgb(237, 133, 35);;
+    z-index: 2000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.bloc-img {
+    height: 83.34vh;
+}
+
+.ligne-photo {
+    height: 27.78vh;
+}
+
+.crea-img {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.crea-video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 27.78vh;
 }
