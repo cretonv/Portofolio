@@ -498,7 +498,6 @@ a#button2:hover {
     font-size: 7vh;
     opacity: 0;
     transition: opacity 0.7s 2.7s;
-    cursor: pointer;
 }
 
 #champ-item {
@@ -515,24 +514,29 @@ a#button2:hover {
     overflow: hidden;
     /*color: transparent;*/
     z-index: 4001;
-    background-image: url("../images/text_back.jpg") ;             /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
+    /*background-image: url("../images/text_back.jpg") ;*/             /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
     -webkit-background-clip: text;
     color: transparent;
-    transition: background-position 1s;
+    transition: background-position 0.8s;
     background-position: 50% -110%; /*background-position: 50% -100%;*/
-    background-size: cover;
+    webkit-text-fill-color: transparent;
+    background-size: auto 200%;
+    background-image: linear-gradient(180deg, white 0%, white 50%, #162984 50%, #0052a6 62.5%, #0077b7 75%, #0099bc 87.5%, #00b9bc 100%);
+    background-position-y: 0;
 }
 
 .anim-item:hover {
-    overflow: hidden;
-    /*color: transparent;*/
+    /*overflow: hidden;
+    !*color: transparent;*!
     z-index: 4001;
-    background-image: url("../images/text_back.jpg") ;             /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
+    background-image: url("../images/text_back.jpg") ;             !*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*!
     -webkit-background-clip: text;
     color: transparent;
     transition: background-position 0.8s;
     background-position: 50% -50%;
-    background-size: cover;
+    background-size: cover;*/
+    background-position-y: 100%;
+    cursor: pointer;
 }
 
 .underline-item {
@@ -1266,7 +1270,7 @@ a#button2:hover {
 
 .crea-title {
     font-family: Raleway;
-    font-size: 9.34vh;
+    font-size: 5.5vw;
     color: white;
     height: 10.34vh;
     text-align: center;
@@ -1281,7 +1285,7 @@ a#button2:hover {
     justify-content: center;
     flex-direction: column;
     margin-top: 3vh;
-    font-size: 2.15vh;
+    font-size: 1.3vw;
     font-family: Montserrat;
 }
 
@@ -1316,6 +1320,7 @@ a#button2:hover {
     opacity: 0.3;
     cursor: pointer;
     animation: appear-fleche 0.5s 2.5s backwards;
+    color:pink;
 }
 
 .fleche:hover {
@@ -1366,6 +1371,45 @@ a#button2:hover {
     font-family: Montserrat;
 }
 
+#triple-logo-title {
+    color: white;
+    font-size: 6vw;
+    font-family: Raleway;
+}
+
+.triple-logo-description {
+    color: white;
+    font-size: 0.895vw;
+    font-family: Montserrat;
+}
+
+#casquette-title {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 19vh;
+}
+
+.casquette-description {
+    color: white;
+    font-size: 0.895vw;
+    font-family: Montserrat;
+}
+
+#ghibli-title {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 19vh;
+    color: white;
+}
+
+.ghibli-description {
+    color: white;
+    font-size: 0.895vw;
+    font-family: Montserrat;
+}
+
 /* ------------------------------------------------------------------ */
 /* Styles des "pages" suivantes */
 
@@ -1380,8 +1424,38 @@ a#button2:hover {
 }
 
 #doors {
-    background-color: rgb(237, 133, 35);;
+    background-color: rgb(237, 133, 35);
     z-index: 2000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#triple-logo {
+    background-color:  rgb(129, 130, 237);
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#casquette {
+    background-color: rgb(237, 146, 129);
+    z-index: 2000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#ghibli {
+    background-color: rgb(4, 46, 102);
+    z-index: 3000;
     position: absolute;
     left: 0;
     right: 0;
@@ -1417,3 +1491,46 @@ a#button2:hover {
     flex-direction: column;
     height: 27.78vh;
 }
+
+.doors-video {
+    height: 25.78vh;
+    margin-bottom: 2vh;
+}
+
+#first-doors-video {
+    margin-top: 1.5vh;
+}
+
+#first-logo-triple {
+    margin-top: 1.5vh;
+}
+
+.triple-logo-img {
+    border-radius: 4px;
+    height: 25.78vh;
+    margin-bottom: 2vh;
+    cursor: zoom-in;
+}
+
+#casquette-photo {
+    border-radius: 4px;
+    height: 79.34vh;
+    cursor: zoom-in;
+    margin-top: 2vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#zoom-casquette{
+    background-position: top !important;
+}
+
+.photo-ghibli {
+    height: 39.67vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2vh;
+}
+
