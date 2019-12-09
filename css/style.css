@@ -77,6 +77,12 @@ img {
     overflow: hidden;
 }
 
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .link, .link:hover {
     text-decoration: none;
     color: white;
@@ -1139,6 +1145,421 @@ a#button2:hover {
     transform: translateX(0vh);
 }
 
+
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
+
+
+#profil {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 3000;
+    background: black;
+    height: 100vh;
+    transition: all 0.7s ease-out 0.7s;
+    color: #fff;
+    overflow: hidden;
+}
+
+#profil.open {
+    width: 100vw;
+}
+
+.profil-content { /*Définis les règles pour le container de la page profil */
+    height: 78vh;
+}
+
+
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+/* Règles pour les éléments afficher sur l'acceuil de la page profil */
+
+#profil-portrait {
+    height: 78vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.portrait-border {                /* Style des bordures */
+    position: absolute;
+    opacity: 0.5;
+}
+
+.portrait-border-bottom {
+    bottom: 0;
+    left: 0.5vw;
+    right: 0.5vw;
+    height: 1px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    /*transition: all 0.5s;
+    animation: appear-bottom 0.5s 1s both;*/
+}
+
+.portrait-border-top {
+    top: 0;
+    left: 0.5vw;
+    right: 0.5vw;
+    height: 1px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    /*transition: all 0.5s;
+    animation: appear-bottom 0.5s 1s both;*/
+}
+
+.portrait-border-right {
+     bottom: 0;
+     top: 0;
+     right: 0.5vw;
+     width: 1px;
+     background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+     opacity: 0.7;
+     /*transition: all 0.5s;
+     animation: appear-bottom 0.5s 1s both;*/
+}
+
+.portrait-border-left {
+    bottom: 0;
+    top: 0;
+    left: 0.5vw;
+    width: 1px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    /*transition: all 0.5s;
+    animation: appear-bottom 0.5s 1s both;*/
+}
+
+
+.profil-portrait-padding {
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    position: relative;
+}
+
+.profil-home-text-container {
+    height: 78vh;
+    position: relative;
+}
+
+.profil-home-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 1.3vw;
+    color: white;
+    text-align: justify;
+    position: absolute;
+}
+
+#first-profil-text {
+    top: 8vh;
+}
+
+#second-profil-text {
+    bottom: 8vh;
+}
+
+#CV {
+    position: absolute;
+    right: 45vw;
+    left: 45vw;
+    bottom: 2vh;
+}
+
+.cv_button {
+    text-align: center;
+    width: fit-content;
+    overflow: hidden;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cv_button a{
+    z-index: 1;
+    padding: 10px;
+    display: block;
+    margin: 0px auto;
+    max-width: 10vw;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.5vh;
+}
+
+a.button-CV {
+    color: white;
+    box-shadow: #0052a6 0 0px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a#buttonCV:hover {
+    color: black;
+    box-shadow: #0099bc 0 80px 0px 2px inset;
+    transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;   /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
+}
+
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+/* Règles pour les éléments afficher sur formation de la page profil */
+
+#formation{
+
+}
+
+#ligne-temporel-container {
+    height: 8vh;
+}
+
+#ligne-temporel {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.raccord-timeline {
+    height: 8vh;
+}
+
+.ligne-raccord {
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 3px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.timeline-description {
+    height: 62vh; /*23 si on rajoute plus tard une ligne */
+}
+
+.timeline-right-border {
+     bottom: 0;
+     top: 0;
+     right: 3vw;
+     width: 2px;
+     background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+     opacity: 0.7;
+     transition: all 0.5s;
+}
+.timeline-left-border {
+    bottom: 0;
+    top: 0;
+    left: 3vw;
+    width: 2px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.timeline-top-border {
+    left: 3vw;
+    top: 0;
+    right: 3vw;
+    height: 2px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.timeline-bottom-border {
+    bottom: 0;
+    left: 3vw;
+    right: 3vw;
+    height: 2px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.formation-logo {
+    margin: 3vw;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22vh;
+}
+
+.formation-date{
+    height: 10vh;
+    font-size: 2.3vw;
+    font-family: Raleway;
+    font-weight: bold;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    text-align: center;
+    line-height: 10vh;
+    white-space: nowrap;
+}
+
+.formation-description {
+    margin-right: 3vw;
+    margin-left: 3vw;
+    font-size: 1vw;
+}
+
+#formation-a-venir1 {
+    font-family: Montserrat;
+    font-weight: bold;
+    line-height: 31vh;
+    white-space: nowrap;
+    height: 31vh;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    font-size: 5vw;
+    text-align: center;
+}
+
+#formation-a-venir2 {
+    font-family: Raleway;
+    font-weight: bold;
+    height: 31vh;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+/* Règles pour les éléments afficher sur les outils de la page profil */
+
+.four-icones {
+    margin-top: 1vh;
+    height: 85vh;
+}
+
+.three-icones {
+    margin-top: 1vh;
+    height: 65.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.lateral-icones {
+    margin-top: 2.5vh;
+    height: 14.5vh;
+}
+
+.outils-right-border {
+    bottom: 0;
+    top: 0;
+    right: 10px;
+    width: 2px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+.outils-left-border {
+    bottom: 0;
+    top: 0;
+    left: 10px;
+    width: 2px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.outils-top-border {
+    left: 10px;
+    top: 0;
+    right: 10px;
+    height: 2px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.outils-bottom-border {
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+/* Règles des détails */
+
+.outil-title {
+    height: 12.5vh;
+    margin: 1vh;
+    font-size: 2vw;
+    font-family: Raleway;
+    font-weight: bold;
+    text-align: center;
+}
+
+.outil-logo-container {
+    height: 12.5vh;
+    margin: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outil-logo {
+    max-height: 10vh;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all .2s cubic-bezier(.63,.6,.35,1.3);
+}
+
+.outil-logo-container:hover .outil-logo {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#mailchimp{
+    max-width: 11.38vh;
+}
+
+#adobe {
+    max-width: 9.77vh;
+}
+
+#sketch {
+    max-width: 11.07vh;
+}
+
+#wp {
+    max-width: 10.6vh;
+}
+
+#resolve, #visual-code, #phpstorm, #sublime-text, #js-logo, #ts, #html-logo {
+    max-width: 10vh;
+}
+
+#php {
+    max-width: 18.51vh;
+}
+
+#sql {
+    max-width: 19.33vh;
+}
+
+#bootstrap {
+    max-width: 11.90vh;
+}
+
+#gitkraken {
+    max-width: 9.93vh;
+}
+
+#css-logo {
+    max-width: 14.10vh;
+}
+
 /* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
@@ -1410,6 +1831,20 @@ a#button2:hover {
     font-family: Montserrat;
 }
 
+#reportage-title {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 19vh;
+    color: white;
+}
+
+.reportage-description {
+    color: white;
+    font-size: 0.895vw;
+    font-family: Montserrat;
+}
+
 /* ------------------------------------------------------------------ */
 /* Styles des "pages" suivantes */
 
@@ -1455,6 +1890,16 @@ a#button2:hover {
 
 #ghibli {
     background-color: rgb(4, 46, 102);
+    z-index: 3000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#reportage {
+    background-color: rgb(103, 168, 136);
     z-index: 3000;
     position: absolute;
     left: 0;
@@ -1528,9 +1973,25 @@ a#button2:hover {
 
 .photo-ghibli {
     height: 39.67vh;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 2vh;
+}
+
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height: 83.34vh;
+    border-radius: 10px;
+}
+
+.video-responsive iframe {
+    left:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top: 0;
 }
 

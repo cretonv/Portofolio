@@ -30,8 +30,9 @@ var menu4= menu_items[3];
 
 var ligne_reseau = document.querySelector('#ligne-reseau');
 
-var photos = document.querySelector("#photos");
 var realisations = document.querySelector("#realisations");
+var photos = document.querySelector("#photos");
+var profil = document.querySelector('#profil')
 
 var display_underline = document.querySelectorAll(".display-underline");
 var display_underline1 = display_underline[0];
@@ -82,6 +83,13 @@ var top_middle_bar_real = document.querySelector('.lat-border-middle-top')
 var bottom_middle_bar_real = document.querySelector('.lat-border-middle-bottom')
 
 var real_category = document.querySelectorAll('.real-category')
+
+/* Variable de la page mon profil */
+
+var profil_active = 0;
+var home_profil = document.querySelector('#home-profil')
+var formation = document.querySelector('#formation')
+var outils = document.querySelector('#outils')
 
 /*------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------*/
@@ -155,6 +163,7 @@ function realisations_access() {
 
     menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
     photos.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page photo si elle était ouverte
+    profil.classList.remove('open')
 
     realisations.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
@@ -183,12 +192,33 @@ function realisations_access() {
 //---------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------//
 
+function profil_access() {
+
+    burger_animation()                                  // animation du bouton burger
+
+    menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
+    realisations.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page reéalisations si elle était ouverte
+    photos.classList.remove('open')
+
+    profil.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
+
+
+
+    menu.open = false                                       // On met à jour l'indicateur d'état
+}
+
+
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
 function photos_access() {
 
     burger_animation()                                  // animation du bouton burger
 
     menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
     realisations.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page reéalisations si elle était ouverte
+    profil.classList.remove('open')
 
     photos.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
@@ -454,5 +484,28 @@ function dezoom(a, b) {
     ovr_zoom.classList.add('hidden');
     photo_back.classList.remove('photo-back-low-opacity');
     zoom_indicator = false;
+}
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Fonctions JS pour la partie mon profil */
+
+function formation_view() {
+    if(profil_active != 2) {
+        home_profil.classList.add('hidden');
+        outils.classList.add('hidden');
+        formation.classList.remove('hidden');
+        gallerie_active = 2;
+    }
+}
+
+function outils_view() {
+    if(profil_active != 3) {
+        home_profil.classList.add('hidden');
+        formation.classList.add('hidden');
+        outils.classList.remove('hidden');
+        gallerie_active = 3;
+    }
 }
 

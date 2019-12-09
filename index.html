@@ -137,8 +137,8 @@
                             <div class="row">
                                 <div class="col-12 menu-item" onclick="realisations_access()"> <span class="anim-item">RÉALISATIONS</span> </div>
                                 <div class="col-12 menu-item" onclick="photos_access()"> <span class="anim-item">PHOTOGRAPHIES</span></div>
-                                <div class="col-12 menu-item"> <span class="anim-item">PARCOURS</span></div>
-                                <div class="col-12 menu-item"> <span class="anim-item">CONTACTS</span> </div>
+                                <div class="col-12 menu-item" onclick="profil_access()"> <span class="anim-item">MON PROFIL</span></div>
+                                <div class="col-12 menu-item"> <span class="anim-item">ME CONTACTER</span> </div>
                             </div>
                             <div class="menu-border menu-border-left"></div>
                             <div class="menu-border menu-border-right"></div>
@@ -199,7 +199,7 @@
                             </a>
                         </div>
                         <div class="col-4">
-                            <a href="#" target="_blank" class="no-link">
+                            <a href="./crea_av.html" target="_blank" class="no-link">
                                 <div id="production-av" class="real-category">
                                     <div id="av-img" class="catégorie-img"></div>
                                     <div class="catégorie-name">Créations audiovisuelles</div>
@@ -437,6 +437,290 @@
             <div id="overlay-divers3" class="overlay hidden" onclick="dezoom('zoom-divers3', 'overlay-divers3')"> <div id="zoom-divers3" class="zoom-img hidden"  style="background-image: url('./images/Divers/Divers3.JPG'); background-position: center; background-size: cover;" onclick="dezoom('zoom-divers3', 'overlay-divers3')"></div></div>
             <div id="overlay-divers4" class="overlay hidden" onclick="dezoom('zoom-divers4', 'overlay-divers4')"> <div id="zoom-divers4" class="zoom-img hidden"  style="background-image: url('./images/Divers/Divers4.JPG'); background-position: center; background-size: cover;" onclick="dezoom('zoom-divers4', 'overlay-divers4')"></div></div>
         </div>
+
+
+    <div id="profil">
+        <div class="container-fluid">
+            <div class="row nav-line">
+                <div class="col-3 center"> <span class="nav-item"> Compétences </span> </div>
+                <div class="col-3 center"> <span class="nav-item" onclick="formation_view()"> Formation </span> </div>
+                <div class="col-3 center"> <span class="nav-item" onclick="outils_view()"> Mes outils </span> </div>
+                <div class="col-3"> </div>
+            </div>
+
+            <div id="home-profil" class="profil-content">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-3 no-padding">
+                        <div class="profil-home-text-container">
+                            <div id="first-profil-text" class="profil-home-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</div>
+                        </div>
+                    </div>
+                    <div class="col-4 profil-portrait-padding">
+                        <div id="profil-portrait" style="background-image: url('./images/portrait-noir-blanc.jpg')"></div>
+                        <!--<div class="portrait-border portrait-border-top"></div>
+                        <div class="portrait-border portrait-border-right"></div>
+                        <div class="portrait-border portrait-border-left"></div>
+                        <div class="portrait-border portrait-border-bottom"></div>-->
+                    </div>
+                    <div class="col-3 no-padding">
+                        <div class="profil-home-text-container">
+                            <div id="second-profil-text" class="profil-home-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div id="CV" class="cv_button mx-auto">
+                    <a id="buttonCV" class="link button-CV" href="#">Télécharger mon CV</a>
+                </div>
+            </div>
+
+            <div id="formation" class="profil-content hidden">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="ligne-temporel-container">
+                            <div id="ligne-temporel" class="crea-border"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-2 raccord-timeline"> <div class="ligne-raccord crea-border"></div></div>
+                    <div class="col-2 raccord-timeline"> </div>
+                    <div class="col-2 raccord-timeline"> <div class="ligne-raccord crea-border"></div></div>
+                    <div class="col-2 raccord-timeline"> </div>
+                    <div class="col-2 raccord-timeline"> <div class="ligne-raccord crea-border"></div></div>
+                    <div class="col-2 raccord-timeline"> </div>
+
+                    <div class="col-4 timeline-description">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="formation-logo" style="background-image: url('https://marie-reynoard.ent.auvergnerhonealpes.fr/lectureFichiergw.do?ID_FICHIER=15');"> </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="formation-date"> 2015-2018 </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="formation-description">
+                                   Ces 3 années m'ont permis de décrocher un bac Économiques et Sociales spécialité Maths avec la mention bien, mais j'ai surtout dévelloppé durant ces 3 ans un réel goût pour le travail et l'apprentissage. Grâce à ces 3 années, je possède de solide bases en Économie, mais aussi en maths et culture générale.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-right-border crea-border"></div>
+                        <div class="timeline-left-border crea-border"></div>
+                        <div class="timeline-top-border crea-border"></div>
+                        <div class="timeline-bottom-border crea-border"></div>
+                    </div>
+                    <div class="col-4 timeline-description">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="formation-logo" style="background-image: url('./images/logo-mmi.png');"> </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="formation-date"> 2018-2020 </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="formation-description">
+                                    Le DUT MMI est une formation pluridisciplinaire qui mélange du développement et de la communication visuel. Il m'a permis de m'ouvrir a de nouveaux univers et de me découvrir une passion pour le dévellopement web, il m'a aussi permis d'acquérir de nombreuses compétences en communicaton visuelle.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-right-border crea-border"></div>
+                        <div class="timeline-left-border crea-border"></div>
+                        <div class="timeline-top-border crea-border"></div>
+                        <div class="timeline-bottom-border crea-border"></div>
+                    </div>
+                    <div class="col-4 timeline-description">
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="formation-a-venir1">
+                                    ...
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div id="formation-a-venir2">
+                                    La suite est à écrire
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-right-border crea-border"></div>
+                        <div class="timeline-left-border crea-border"></div>
+                        <div class="timeline-top-border crea-border"></div>
+                        <div class="timeline-bottom-border crea-border"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="outils" class="profil-content hidden">
+                <div class="row">
+                    <div class="col-3 four-icones">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="outil-title vertical-center"> Front-End</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="outil-logo-container">
+                                    <img id="html-logo" src="./images/outils/html.png" class="outil-logo" alt="logo HTML 5"/>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="outil-logo-container">
+                                    <img id="css-logo" src="./images/outils/css.png" class="outil-logo" alt="logo CSS 3"/>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="outil-logo-container">
+                                    <img id="js-logo" src="./images/outils/JavaScript.png" class="outil-logo" alt="logo JavaScript"/>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="outil-logo-container">
+                                    <img id="ts" src="./images/outils/typescript.png" class="outil-logo" alt="logo Typescript"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="outils-right-border crea-border"></div>
+                        <div class="outils-left-border crea-border"></div>
+                        <div class="outils-top-border crea-border"></div>
+                        <div class="outils-bottom-border crea-border"></div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-6 three-icones">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="outil-title vertical-center">Design</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="adobe" src="./images/outils/adobe.png" class="outil-logo" alt="logo Adobe"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="sketch" src="./images/outils/sketch.png" class="outil-logo" alt="logo Sketch"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="resolve" src="./images/outils/resolve.png" class="outil-logo" alt="logo Resolve"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="outils-right-border crea-border"></div>
+                                <div class="outils-left-border crea-border"></div>
+                                <div class="outils-top-border crea-border"></div>
+                                <div class="outils-bottom-border crea-border"></div>
+                            </div>
+                            <div class="col-6 three-icones">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="outil-title vertical-center">IDE</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="phpstorm" src="./images/outils/phpstorm.png" class="outil-logo" alt="logo Php storm"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="visual-code" src="./images/outils/visual_code.png" class="outil-logo" alt="logo Visual studio code"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="sublime-text" src="./images/outils/Sublime_text.png" class="outil-logo" alt="logo Sublime text"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="outils-right-border crea-border"></div>
+                                <div class="outils-left-border crea-border"></div>
+                                <div class="outils-top-border crea-border"></div>
+                                <div class="outils-bottom-border crea-border"></div>
+                            </div>
+                            <div class="col-12 lateral-icones">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="outil-title vertical-center">Back-end</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="outil-logo-container">
+                                            <img id="php" src="./images/outils/php.png" class="outil-logo" alt="logo PHP"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="outil-logo-container">
+                                            <img id="sql" src="./images/outils/sql.png" class="outil-logo" alt="logo sql"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="outils-right-border crea-border"></div>
+                                <div class="outils-left-border crea-border"></div>
+                                <div class="outils-top-border crea-border"></div>
+                                <div class="outils-bottom-border crea-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12 three-icones">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="outil-title vertical-center">Divers</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="mailchimp" src="./images/outils/mailchimp.png" class="outil-logo" alt="logo Mailchimp"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="bootstrap" src="./images/outils/bootstrap.png" class="outil-logo" alt="logo Bootstrap"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="outil-logo-container">
+                                            <img id="gitkraken" src="./images/outils/gitkraken.png" class="outil-logo" alt="logo Gitkraken"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="outils-right-border crea-border"></div>
+                                <div class="outils-left-border crea-border"></div>
+                                <div class="outils-top-border crea-border"></div>
+                                <div class="outils-bottom-border crea-border"></div>
+                            </div>
+                            <div class="col-12 lateral-icones">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="outil-title vertical-center">CMS</div>
+                                    </div>
+                                    <div class="col-6 no-padding">
+                                        <div class="outil-logo-container">
+                                            <img id="wp" src="./images/outils/wordpress.png" class="outil-logo" alt="logo Wordpress"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="outils-right-border crea-border"></div>
+                                <div class="outils-left-border crea-border"></div>
+                                <div class="outils-top-border crea-border"></div>
+                                <div class="outils-bottom-border crea-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 <script type="text/javascript" src="./JS/home.js"></script>
