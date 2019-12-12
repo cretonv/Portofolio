@@ -84,12 +84,16 @@ var bottom_middle_bar_real = document.querySelector('.lat-border-middle-bottom')
 
 var real_category = document.querySelectorAll('.real-category')
 
-/* Variable de la page mon profil */
+/* Variables de la page mon profil */
 
 var profil_active = 0;
 var home_profil = document.querySelector('#home-profil')
 var formation = document.querySelector('#formation')
 var outils = document.querySelector('#outils')
+
+/* Variables de la page contacts */
+
+var contacts = document.querySelector('#contacts')
 
 /*------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------*/
@@ -164,6 +168,7 @@ function realisations_access() {
     menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
     photos.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page photo si elle était ouverte
     profil.classList.remove('open')
+    contacts.classList.remove('open')
 
     realisations.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
@@ -199,6 +204,7 @@ function profil_access() {
     menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
     realisations.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page reéalisations si elle était ouverte
     photos.classList.remove('open')
+    contacts.classList.remove('open')
 
     profil.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
@@ -219,6 +225,7 @@ function photos_access() {
     menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
     realisations.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page reéalisations si elle était ouverte
     profil.classList.remove('open')
+    contacts.classList.remove('open')
 
     photos.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
@@ -385,6 +392,7 @@ function Divers_view() {
     }
 }
 
+
 /* Fonctions dédoublé avec les noms qui correspondent à la deuxième gallerie */
 
 function next_slide_2() {
@@ -509,3 +517,23 @@ function outils_view() {
     }
 }
 
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
+function contacts_access() {
+
+    burger_animation()                                  // animation du bouton burger
+
+    menu.classList.remove('open')                // On enlève la classe CSS et fais disparaitre le menu
+    realisations.classList.remove('open')              // On enlève la classe CSS et fais disparaitre la page reéalisations si elle était ouverte
+    photos.classList.remove('open')
+    profil.classList.remove('open')
+
+
+    contacts.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
+
+
+
+    menu.open = false                                       // On met à jour l'indicateur d'état
+}
