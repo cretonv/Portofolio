@@ -88,8 +88,11 @@ var real_category = document.querySelectorAll('.real-category')
 
 var profil_active = 0;
 var home_profil = document.querySelector('#home-profil')
+var competences = document.querySelector('#competences')
 var formation = document.querySelector('#formation')
 var outils = document.querySelector('#outils')
+
+var competences_descriptions = document.querySelectorAll('.competence-description')
 
 /* Variables de la page contacts */
 
@@ -499,10 +502,21 @@ function dezoom(a, b) {
 /*----------------------------------------------------------------------------*/
 /* Fonctions JS pour la partie mon profil */
 
+function competences_view() {
+    if(profil_active != 1) {
+        home_profil.classList.add('hidden');
+        outils.classList.add('hidden');
+        formation.classList.add('hidden');
+        competences.classList.remove('hidden');
+        gallerie_active = 1;
+    }
+}
+
 function formation_view() {
     if(profil_active != 2) {
         home_profil.classList.add('hidden');
         outils.classList.add('hidden');
+        competences.classList.add('hidden');
         formation.classList.remove('hidden');
         gallerie_active = 2;
     }
@@ -512,6 +526,7 @@ function outils_view() {
     if(profil_active != 3) {
         home_profil.classList.add('hidden');
         formation.classList.add('hidden');
+        competences.classList.add('hidden');
         outils.classList.remove('hidden');
         gallerie_active = 3;
     }
@@ -536,4 +551,13 @@ function contacts_access() {
 
 
     menu.open = false                                       // On met à jour l'indicateur d'état
+}
+
+function description_appear(a) {
+    for(var i = 0; i < competences_descriptions.length; i++){
+        competences_descriptions[i].classList.add('description-cache');
+    }
+
+    var target_description = document.querySelector('#competence-description-' + a)
+    target_description.classList.remove('description-cache')
 }

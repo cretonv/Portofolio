@@ -59,9 +59,9 @@
                             <div class="flip-card-back">
                                 <div class="back-content">
                                     <p><span id="home_nom">Vincent Creton</span></p>
-                                    <p>19 ans</p>
-                                    <p>Munis d'un permis B</p>
-                                    <p>Titulaire d'un bac ES mention bien</p>
+                                    <p class="back-info">19 ans</p>
+                                    <p class="back-info">Munis d'un permis B</p>
+                                    <p class="back-info">À la recherche d'un stage dans le développement web</p>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +442,7 @@
     <div id="profil">
         <div class="container-fluid">
             <div class="row nav-line">
-                <div class="col-3 center"> <span class="nav-item"> Compétences </span> </div>
+                <div class="col-3 center"> <span class="nav-item" onclick="competences_view()"> Compétences </span> </div>
                 <div class="col-3 center"> <span class="nav-item" onclick="formation_view()"> Formation </span> </div>
                 <div class="col-3 center"> <span class="nav-item" onclick="outils_view()"> Mes outils </span> </div>
                 <div class="col-3"> </div>
@@ -472,6 +472,217 @@
                 </div>
                 <div id="CV" class="cv_button mx-auto">
                     <a id="buttonCV" class="link button-CV" href="./images/CV_Vincent_Creton.pdf" download target="_blank">Télécharger mon CV</a>
+                </div>
+            </div>
+
+            <div id="competences" style="background-image: url('./images/mac.jpg')" class="profil-content hidden">
+                <div class="row">
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('1')">
+                                    <div>
+                                        <span class="big-competence">Site web</span>
+                                        <br> <span class="little-competence">dynamique</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('1')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-1" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec une base de données via MySQL et php my admin
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('2')">
+                                    <div>
+                                        <span class="big-competence">Site web</span>
+                                        <br> <span class="little-competence">vitrine</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('2')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-2" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('3')">
+                                    <div>
+                                        <span class="big-competence">Design</span>
+                                        <br> <span class="little-competence">web</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('3')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-3" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('4')">
+                                    <div>
+                                        <span class="big-competence">Identité</span>
+                                        <br> <span class="little-competence">visuelle</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('4')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-4" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('5')">
+                                    <div>
+                                        <span class="big-competence">Logo</span>
+                                        <br> <span class="little-competence">& design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('5')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#000000;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path fill="000000" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-5" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('6')">
+                                    <div>
+                                        <span class="big-competence">Retouche</span>
+                                        <br> <span class="little-competence">photo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('6')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-6" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('7')">
+                                    <div>
+                                        <span class="big-competence">Réalisation</span>
+                                        <br> <span class="little-competence">vidéo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('7')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-7" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('8')" >
+                                    <div>
+                                        <span class="big-competence">Montage & étallonage</span>
+                                        <br> <span class="little-competence">vidéo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('8')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-8" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 competence-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competence-title" onclick="description_appear('9')">
+                                    <div>
+                                        <span class="big-competence">Document</span>
+                                        <br> <span class="little-competence">print</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="competence-point">
+                                    <svg onclick="description_appear('9')" class="dessin-point" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.2vw" height="1.2vw" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><circle class="st0" cx="11" cy="11" r="10.5"/><path class="st0" d="M11,1c5.5,0,10,4.5,10,10s-4.5,10-10,10S1,16.5,1,11S5.5,1,11,1 M11,0C4.9,0,0,4.9,0,11c0,6.1,4.9,11,11,11 s11-4.9,11-11C22,4.9,17.1,0,11,0L11,0z"/> </g> </svg> 
+                                </div>
+                            </div>
+                            <div class="col-12 ovf-hidden">
+                                <div id="competence-description-9" class="competence-description description-cache">
+                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -848,7 +1059,7 @@
                             <div class="contact-content mail">
                                 <div class="row">
                                     <div class="col-4">
-                                        <div><a class="no-link" target="_blank" href="https://unsplash.com/@vcreton"> <img class="reseau-contact" src="./images/logo_unsplash.png" alt="logo unsplash"/> </a></div>
+                                        <div><a class="no-link" target="_blank" href="https://github.com/cretonv"> <img class="reseau-contact" src="./images/GitHub.svg" alt="logo GitHub"/> </a></div>
                                     </div>
                                     <div class="col-4">
                                         <div><a class="no-link" target="_blank" href="https://unsplash.com/@vcreton"> <img class="reseau-contact" src="./images/logo_unsplash.png" alt="logo unsplash"/> </a></div>

@@ -194,8 +194,13 @@ img {
 }
 
 #home_nom {
-    font-weight: bolder;
-    font-size: 2.5vh;
+    font-weight: bold;
+    font-size: 2.8vh;
+    font-family: Raleway;
+}
+
+.back-info {
+    font-family: Montserrat;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -1031,7 +1036,7 @@ a#button2:hover {
 /* Règles CSS pour changer de gallerie d'images en fonction du choix de l'utilisateur */
 
 .hidden {
-    display: none
+    display: none !important;
 }
 
 /* Règles copier de la première gallerie mais avec les noms modifiés pour la seconde gallerie */
@@ -1301,6 +1306,80 @@ a#buttonCV:hover, a#buttonCV-2:hover {
     color: black;
     box-shadow: #0099bc 0 80px 0px 2px inset;
     transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;   /*linear-gradient(to top, #162984, #0052a6, #0077b7, #0099bc, #00b9bc)*/
+}
+
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+/* Règles pour les éléments afficher sur compétences de la page profil */
+
+#competences{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.competence-container {
+    height: 26vh;
+}
+
+.competence-title{
+    height: 9vh;
+    margin-top: 1.58vh;
+    margin-bottom: 1.58vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.big-competence {
+    font-size: 1.4vw;
+    font-family: Raleway;
+}
+
+.little-competence {
+    font-size: 1vw;
+    font-family: Montserrat;
+    font-style: italic;
+}
+
+.competence-point {
+    height: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.competence-description{
+    height: 9vh;
+    margin-top: 1.58vh;
+    margin-bottom: 1.58vh;
+    text-align: center;
+    font-size: 0.9vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.dessin-point {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.description-cache {
+    transform: translateY(-20vh);
+}
+
+.ovf-hidden {
+    overflow: hidden;
+}
+
+.competence-container:hover .dessin-point {
+    transform: scale(1.5);
 }
 
 /* ----------------------------------------------------------------------*/
