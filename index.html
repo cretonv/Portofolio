@@ -118,7 +118,7 @@
     </header>
 
 
-    <div id="menu">  <!-- COed HTML de la page menu -->
+    <div id="menu">  <!-- Code HTML de la page menu -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2 no no_padding"></div>
@@ -158,8 +158,8 @@
             </div>
         </div>
         <div id="ligne-reseau">
-            <div id="linkedin" class="reseau-element"> <a class="no-link" target="_blank" href="https://www.linkedin.com/in/vincent-creton-776816187"> <i class="fab fa-linkedin"></i> </a></div>
-            <div id="github" class="reseau-element"> <a class="no-link" target="_blank" href="https://github.com/cretonv"> <i class="fab fa-github"></i> </a> </div>
+            <div id="linkedin" class="reseau-element"> <a class="no-link" target="_blank" href="https://www.linkedin.com/in/vincent-creton-776816187"> <img id="linkedin-logo" src="./images/logo_linkedin.png" alt="logo Linkedin"/> </a></div>
+            <div id="github" class="reseau-element"> <a class="no-link" target="_blank" href="https://github.com/cretonv"> <img id="github-logo" src="./images/GitHub.svg" alt="logo GitHub"/> </a> </div>
             <div id="unsplash" class="reseau-element"><a class="no-link" target="_blank" href="https://unsplash.com/@vcreton"> <img id="unsplash-logo" src="./images/logo_unsplash.png" alt="logo unsplash"/> </a></div>
         </div>
     </div>
@@ -271,8 +271,10 @@
                             <img class="gallerie-img center-me position2" alt="photo" src="./images/Irlande/Irlande3.jpg"/>
                             <img class="gallerie-img center-me position3" alt="photo" src="./images/Irlande/Irlande4.jpg"/>
                         </div>
-                        <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide()">
-                        <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide()">
+                        <div class="fleche-container">
+                            <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide()">
+                            <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide()">
+                        </div>
                     </div>
                     <div class="col-12">
                         <div class="center unsplash-zone">
@@ -297,8 +299,10 @@
                             <img class="gallerie-img-2 center-me position2" alt="photo" src="./images/Londres/Londres3.jpg"/>
                             <img class="gallerie-img-2 center-me position3" alt="photo" src="./images/Londres/Londres4.jpg"/>
                         </div>
-                        <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_2()">
-                        <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_2()">
+                        <div class="fleche-container">
+                            <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_2()">
+                            <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_2()">
+                        </div>
                     </div>
                     <div class="col-12">
                         <div class="center unsplash-zone">
@@ -323,8 +327,10 @@
                             <img class="gallerie-img-3 center-me position2" alt="photo" src="./images/Divers/Divers3.JPG"/>
                             <img class="gallerie-img-3 center-me position3" alt="photo" src="./images/Divers/Divers4.JPG"/>
                         </div>
-                        <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_3()">
-                        <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_3()">
+                        <div class="fleche-container">
+                            <img src="./images/btn_prev.png" alt="Précédente" class="prev-control control" onclick="prev_slide_3()">
+                            <img src="./images/btn_next.png" alt="Suivante" class="next-control control" onclick="next_slide_3()">
+                        </div>
                     </div>
                     <div class="col-12"></div>
                 </div>
@@ -440,7 +446,7 @@
 
 
     <div id="profil">
-        <div class="container-fluid">
+        <div id="profil-content-container" class="container-fluid hidden-opacity">
             <div class="row nav-line">
                 <div class="col-3 center"> <span class="nav-item" onclick="competences_view()"> Compétences </span> </div>
                 <div class="col-3 center"> <span class="nav-item" onclick="formation_view()"> Formation </span> </div>
@@ -517,7 +523,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-2" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    J’ai les compétences pour réaliser des sites vitrines, statiques ou non, permettant de présenter les activités et les informations d’une entreprise ou d’une personne, à l’image de ce site.
                                 </div>
                             </div>
                         </div>
@@ -540,7 +546,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-3" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    Grâce à mon DUT, je peut m’occuper de la création du design d’un site de A à Z de façon original, en créant chaque visuel et en les intégrant au site.
                                 </div>
                             </div>
                         </div>
@@ -563,7 +569,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-4" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    J’ai la possibilité de créer une identité visuelle originale et adapté à une entreprise, un particulier ou même un projet précis. Cette identité visuelle peut être ensuite appliqué à un site, des visuels prints…
                                 </div>
                             </div>
                         </div>
@@ -586,7 +592,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-5" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    Je peux vous proposer des logos et des designs adaptés à votre demande permettant de faire ressortir le message et les valeurs que vous voulez transmettre.
                                 </div>
                             </div>
                         </div>
@@ -609,7 +615,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-6" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    Grâce à ma passion pour la photo, j’ai développé des compétences dans ce domaine et notamment dans la retouche photos, ce qui me permet de rajouter de la vie au photos et de leur donner plus de puissance.
                                 </div>
                             </div>
                         </div>
@@ -632,7 +638,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-7" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    Mes 2 ans de DUT MMI m’ont apporté des notions de réalisations vidéos, que ça soit à destination de court métrage, de trailer, ou même de mini reportage, je suis capable de réaliser ces formats en gérants l’audio ou la vidéo.
                                 </div>
                             </div>
                         </div>
@@ -655,7 +661,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-8" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    En complément de mes compétences de réalisations vidéo, je suis aussi capable de monter une réalisation vidéo et de réaliser un étalonnage complet via Resolve ou Premiere Pro.
                                 </div>
                             </div>
                         </div>
@@ -678,7 +684,7 @@
                             </div>
                             <div class="col-12 ovf-hidden">
                                 <div id="competence-description-9" class="competence-description description-cache">
-                                    Je suis capable de réaliser des sites web dynamiques avec PHP, avec une création et des interactions avec des bases de données via MySQL
+                                    Je suis en mesure de créer des visuels prints, d’une simple affiche à un dossier de plusieurs pages. Ces documents s’adapte à votre demande et son réaliser à vos cotés pour votre satisfaction.
                                 </div>
                             </div>
                         </div>
@@ -934,7 +940,7 @@
     </div>
 
     <div id="contacts">
-        <div class="container-fluid">
+        <div id="contacts-content-container" class="container-fluid hidden-opacity">
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-11 no-padding">
@@ -1062,7 +1068,7 @@
                                         <div><a class="no-link" target="_blank" href="https://github.com/cretonv"> <img class="reseau-contact" src="./images/GitHub.svg" alt="logo GitHub"/> </a></div>
                                     </div>
                                     <div class="col-4">
-                                        <div><a class="no-link" target="_blank" href="https://unsplash.com/@vcreton"> <img class="reseau-contact" src="./images/logo_unsplash.png" alt="logo unsplash"/> </a></div>
+                                        <div><a class="no-link" target="_blank" href="https://www.linkedin.com/in/vincent-creton-776816187/"> <img class="reseau-contact" src="./images/logo_linkedin.png" alt="logo Linkedin"/> </a></div>
                                     </div>
                                     <div class="col-4">
                                         <div><a class="no-link" target="_blank" href="https://unsplash.com/@vcreton"> <img class="reseau-contact" src="./images/logo_unsplash.png" alt="logo unsplash"/> </a></div>
@@ -1093,7 +1099,7 @@
                         <div class="col-12 no-padding">
                             <div class="contact-content">
                                 <div id="carte-visite" class="cv_button">
-                                    <a id="button-carte-visite" class="link button-CV contact-button" href="#" target="_blank">Télécharger ma carte</a>
+                                    <a id="button-carte-visite" class="link button-CV contact-button" href="./images/Carte-de-visite.png" target="_blank">Télécharger ma carte</a>
                                 </div>
                             </div>
                         </div>

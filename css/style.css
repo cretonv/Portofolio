@@ -50,6 +50,10 @@ li, ul {
     list-style: none;
 }
 
+.hidden-opacity {
+    opacity: 0;
+}
+
 .no-padding {
     padding: 0;
 }
@@ -211,6 +215,17 @@ img {
     position: fixed;
     right: 2vh;
     top: 2vh;
+    width: 7vh;
+    height: 7vh;
+    overflow: hidden;
+    z-index: 7000;
+    cursor: pointer;
+}
+
+#burger-crea {
+    position: fixed;
+    right: 0.5vw;
+    top: 0.5vw;
     width: 7vh;
     height: 7vh;
     overflow: hidden;
@@ -595,6 +610,14 @@ a#button2:hover {
     height: 3vh;
 }
 
+#linkedin-logo {
+    height: 3vh;
+}
+
+#github-logo {
+    height: 3vh;
+}
+
 /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */
@@ -749,7 +772,7 @@ a#button2:hover {
     cursor: pointer;
 }
 
-.real-category:hover .catégorie-img{
+.real-category:hover .catégorie-img, .menu-crea-element:hover .item-image{
     opacity: 0.4;
 }
 
@@ -778,15 +801,15 @@ a#button2:hover {
 }
 
 #web-img {
-    background-image: url('../images/home.jpg');
+    background-image: url('../images/Illustrations/illustration_web.png');
 }
 
 #graph-img {
-    background-image: url('../images/home.jpg');
+    background-image: url('../images/Illustrations/illustration_graph.png');
 }
 
 #av-img {
-    background-image: url('../images/home.jpg');
+    background-image: url('../images/Illustrations/illustration_av.png');
 }
 
 /* ------------------------------------------------------------------ */
@@ -976,6 +999,13 @@ a#button2:hover {
 
 /* Gère les classes CSS pour les commandes d'affichages de la gallerie */
 
+.fleche-container{
+    position: relative;
+    float: left;
+    height: 55vh;
+    width: 85vh;
+}
+
 .prev-control {
     left: -10vh;
     float: left;
@@ -983,7 +1013,7 @@ a#button2:hover {
 
 .next-control {
     float: right;
-    right: 0;
+    right: -18vh;
 }
 
 .control {
@@ -1179,6 +1209,9 @@ a#button2:hover {
     height: 78vh;
 }
 
+#profil-content-container {
+    transition: all 0.5s 1.5s;
+}
 
 /* ----------------------------------------------------------------------*/
 /* ----------------------------------------------------------------------*/
@@ -1646,6 +1679,89 @@ a#buttonCV:hover, a#buttonCV-2:hover {
 /* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */ /* ------------------------------------------------------------------ */
 
+/* Les règles CSS suivantes concernent les menus des pages créa */
+
+.ligne-vide-menu-crea{
+    height: 30vh;
+}
+
+.ligne-vide-menu-crea-graph{
+    height: 7.5vh;
+}
+
+.ligne-vide-menu-graph2{
+    height: 5vh;
+}
+
+.content-menu-crea {
+    height: 40vh;
+}
+
+.menu-crea-element {
+    height: 40vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.item-image {
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item-name {
+    color: white;
+    font-size: 3vh;
+    transform: translateY(-60vh);
+    transition: all 0.7s;
+    cursor: pointer;
+    font-family: Raleway;
+}
+
+.menu-crea-element:hover .item-name{
+    transform: translateY(-21.5vh);
+    transition: all 0.7s;
+}
+
+
+
+#qwwizzy-menu-item {
+    font-family: acier-bat-noir;
+}
+
+#doors-menu-item {
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 18vh;
+}
+
+.menu-crea-element:hover #doors-menu-item{
+    transform: translateY(-8.5vh);
+    transition: all 0.7s;
+}
+
+#casquette-menu-item {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 8vh;
+}
+
+#casquette-item-image {
+    background-position: top !important;
+}
+
+
+.menu-crea-element:hover #casquette-menu-item{
+    transform: translateY(-2.5vh);
+    transition: all 0.7s;
+}
+
 /* Les règles CSS suivantes concernent les pages créa */
 
 .home-crea {
@@ -1824,8 +1940,22 @@ a#buttonCV:hover, a#buttonCV-2:hover {
     color:pink;
 }
 
-.fleche:hover {
+.fleche:hover, .fleche-reverse:hover {
     opacity: 1;
+}
+
+.fleche-reverse{
+    position: absolute;
+    height: 4vw;
+    width: 4vw;
+    bottom: 7.5vh;
+    right: 43vw;
+    left: 53vw;
+    transform: rotate(0.75turn);
+    opacity: 0.3;
+    cursor: pointer;
+    animation: appear-fleche 0.5s 2.5s backwards;
+    color:pink;
 }
 
 @keyframes appear-fleche {
@@ -1880,7 +2010,7 @@ a#buttonCV:hover, a#buttonCV-2:hover {
 
 .triple-logo-description {
     color: white;
-    font-size: 0.895vw;
+    font-size: 1vw;
     font-family: Montserrat;
 }
 
@@ -1910,6 +2040,21 @@ a#buttonCV:hover, a#buttonCV-2:hover {
     font-size: 0.895vw;
     font-family: Montserrat;
 }
+
+#echo-title {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 19vh;
+    color: white;
+}
+
+.echo-description {
+    color: white;
+    font-size: 0.895vw;
+    font-family: Montserrat;
+}
+
 
 #reportage-title {
     background-position: center;
@@ -1971,6 +2116,16 @@ a#buttonCV:hover, a#buttonCV-2:hover {
 #ghibli {
     background-color: rgb(4, 46, 102);
     z-index: 3000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#echo{
+    background-color: rgb(28, 102, 74);
+    z-index: 4000;
     position: absolute;
     left: 0;
     right: 0;
@@ -2059,6 +2214,14 @@ a#buttonCV:hover, a#buttonCV-2:hover {
     margin-bottom: 2vh;
 }
 
+.echo-affiche {
+    height: 83.34vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/echo_affiche.jpg');
+}
+
 .video-responsive {
     overflow:hidden;
     padding-bottom:56.25%;
@@ -2115,6 +2278,10 @@ a#buttonCV:hover, a#buttonCV-2:hover {
     flex-direction: column;
     justify-content: center;
 }
+
+#contacts-content-container {
+     transition: all 0.5s 1.5s;
+ }
 
 .big-intro {
     height: 17.5vh;

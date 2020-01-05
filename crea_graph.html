@@ -11,6 +11,110 @@
 </head>
 <body>
 
+    <div id="burger-crea" class="oh" onclick="burger_action()">
+        <div id="burger-hover"></div>
+        <div class="burger-line-wrap-0 burger-line-wrap oh">
+            <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.9s; width: 5vh;"></div>
+        </div>
+        <div class="burger-line-wrap-1 burger-line-wrap oh">
+            <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.7s; width: 5vh;"></div>
+        </div>
+        <div class="burger-line-wrap-2 burger-line-wrap oh">
+            <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.5s; width: 5vh;"></div>
+        </div>
+        <div id="burger-close-wrap-0" class="burger-close-wrap oh" style = "transition: width 0.7s 1s; width: 0vh;"> </div>
+        <div id="burger-close-wrap-1" class="burger-close-wrap oh" style = "transition: width 0.7s 1s; width: 0vh;"> </div>
+        <!--<div id="burger-border-wrap" style="opacity: 0.5;">
+            <div id="burger-border-top" class="burger-border"></div>
+            <div id="burger-border-bottom" class="burger-border"></div>
+            <div id="burger-border-left" class="burger-border"></div>
+            <div id="burger-border-right" class="burger-border"></div>
+        </div>-->
+    </div>
+
+    <div id="menu">  <!-- COed HTML de la page menu -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="ligne-vide-menu-crea-graph"></div>
+            </div>
+
+            <div class="content-menu-crea">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4 no-padding">
+                        <div class="menu-crea-element" onclick="logos_menu()">
+                            <div style="background-image:url('./images/Triple-Logo/Gilles_Joe.png')" class="item-image"></div>
+                            <div class="item-name">Triple-Logos</div>
+
+                            <div class="crea-border contact-border-bottom"></div>
+                            <div class="crea-border contact-border-right"></div>
+                            <div class="crea-border contact-border-left"></div>
+                            <div class="crea-border contact-border-top"></div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        <div class="menu-crea-element" onclick="casquette_menu()">
+                            <div id="casquette-item-image" style="background-image:url('./images/Casquette/modele.png')" class="item-image"></div>
+                            <div class="item-name">
+                                <div id="casquette-menu-item" style="background-image: url('./images/Casquette/logo.png')"></div>
+                            </div>
+
+                            <div class="crea-border contact-border-bottom"></div>
+                            <div class="crea-border contact-border-right"></div>
+                            <div class="crea-border contact-border-left"></div>
+                            <div class="crea-border contact-border-top"></div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="ligne-vide-menu-graph2"></div>
+            </div>
+
+            <div class="content-menu-crea">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4 no-padding">
+                        <div class="menu-crea-element" onclick="ghibli_menu()">
+                            <div style="background-image:url('./images/Ghibli/no-face.svg')" class="item-image"></div>
+                            <div class="item-name">Ghibli</div>
+
+                            <div class="crea-border contact-border-bottom"></div>
+                            <div class="crea-border contact-border-right"></div>
+                            <div class="crea-border contact-border-left"></div>
+                            <div class="crea-border contact-border-top"></div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        <div class="menu-crea-element" onclick="echo_menu()">
+                            <div style="background-image:url('./images/echo_affiche.jpg')" class="item-image"></div>
+                            <div class="item-name">Affiche Echo</div>
+
+                            <div class="crea-border contact-border-bottom"></div>
+                            <div class="crea-border contact-border-right"></div>
+                            <div class="crea-border contact-border-left"></div>
+                            <div class="crea-border contact-border-top"></div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="ligne-vide-menu-graph"></div>
+            </div>
+        </div>
+        <div id="ligne-reseau">
+            <div id="linkedin" class="reseau-element"> <a class="no-link" target="_blank" href="https://www.linkedin.com/in/vincent-creton-776816187"> <i class="fab fa-linkedin"></i> </a></div>
+            <div id="github" class="reseau-element"> <a class="no-link" target="_blank" href="https://github.com/cretonv"> <i class="fab fa-github"></i> </a> </div>
+            <div id="unsplash" class="reseau-element"><a class="no-link" target="_blank" href="https://unsplash.com/@vcreton"> <img id="unsplash-logo" src="./images/logo_unsplash.png" alt="logo unsplash"/> </a></div>
+        </div>
+    </div>
+
     <header class="page-crea open">
         <div class="home-crea">
             <!--<h3> <strong>MERCI LEANA</strong></h3>-->
@@ -111,15 +215,14 @@
                                         </div>
                                         <div class="col-6 description-crea">
                                             <span class="triple-logo-description">
-                                                Pour ce projet, il nous fallait créer un site contenant une interaction avec une base de données. Réunis par groupe de 3, nous avons donc décider de créer un site de quizz avec des questions type VRAI / FAUX.
-                                                <br><br>La particularité de ce site est qu’il dispose d’un back-office qui permet à des administrateurs de gérer son contenu (ajout / modification / suppression de questions / thèmes / catégories, choisir la couleur de thème du site, d’avoir une vue d’ensemble des statistiques du site…)
-                                                <br><br>Pour la création de ce site, nous nous sommes donc appuyés sur PHP et nous avons créer un système de templates, et pour ce qui est du design du site, nous nous sommes appuyés sur Twitter Bootstrap et sur une navbar présente sur chaque pages.
+                                                Pour ce travail d’esthétique, l’idée était de réaliser 3 différents logotypes pour 3 entreprises fictives.
+                                                <br><br>Pour cette réalisation, je suis donc d’abord passer par un support papier au feutre noir pour faire des essais et chercher une idée pour les logos, qui devais être différent et se démarquer dans les procédés de création.
                                             </span>
                                         </div>
                                         <div class="col-6 description-crea">
                                             <span class="triple-logo-description">
-                                                Le programme du site utilise aussi des classes qui sont appelées à plusieurs reprises et qui permettent d’éviter une redondance de code.
-                                                <br><br>Lors de ce projet, nous nous sommes d’abord concerté pour choisir le thème de notre site et la façon de le réaliser, puis on s’est plus ou moins séparé les tâches. J’étais donc responsable du design du site et de toute les animations front-end de celui-ci. Malgré cela, j’ai aussi participé au développement back-end du site pour suppléer mes coéquipiers.
+                                                Pour cette réalisation, je suis donc d’abord passer par un support papier au feutre noir pour faire des essais et chercher une idée pour les logos, qui devais être différent et se démarquer dans les procédés de création.
+                                                <br><br>Ce travail m’a permis de m’essayer à la création de logo d’entreprise, de toutes types, et de me trouver une démarche de fabrication pour arriver à des résultats satisfaisants pour le client.
                                             </span>
                                         </div>
                                     </div>
@@ -143,6 +246,7 @@
             <div id="triple-logo-right" class="crea-border"></div>
             <div id="triple-logo-bottom" class="crea-border"></div>
             <svg id="fleche-triple-logo" onclick="casquette_appear()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 227.42 176.27"><defs><style>.cls-1{stroke-miterlimit:10;fill:white;stroke:white;}</style><linearGradient id="Dégradé_bleu" x1="0.5" y1="88.14" x2="226.92" y2="88.14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#162984"/><stop offset="0.08" stop-color="#11328c"/><stop offset="0.22" stop-color="#034ca1"/><stop offset="0.25" stop-color="#0052a6"/><stop offset="0.5" stop-color="#0077b7"/><stop offset="0.75" stop-color="#0099bc"/><stop offset="0.99" stop-color="#00b9bc"/></linearGradient><linearGradient id="Dégradé_bleu-2" x1="0" y1="88.14" x2="227.42" y2="88.14" xlink:href="#Dégradé_bleu"/></defs><title>Fichier 2</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M7,71.06H152s7-1,4-7l-35.5-35.5s-7.5-7.5,1.5-13.5l11-11s6-8,13,0,76.5,76.5,76.5,76.5,9.5,7.5.5,14.5-76.5,76.5-76.5,76.5-4.5,7.5-11.5,2.5l-13.5-13.5s-7-7,0-12,33-33,33-33,8-9-2-10-144,0-144,0-8,0-8-6v-23S-.46,70.56,7,71.06Z"/></g></g></svg>
+            <!--<svg class="fleche-reverse" onclick="triple_logo_appear()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 227.42 176.27"><defs><style>.cls-1{stroke-miterlimit:10;fill:white;stroke:white;}</style><linearGradient id="Dégradé_bleu" x1="0.5" y1="88.14" x2="226.92" y2="88.14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#162984"/><stop offset="0.08" stop-color="#11328c"/><stop offset="0.22" stop-color="#034ca1"/><stop offset="0.25" stop-color="#0052a6"/><stop offset="0.5" stop-color="#0077b7"/><stop offset="0.75" stop-color="#0099bc"/><stop offset="0.99" stop-color="#00b9bc"/></linearGradient><linearGradient id="Dégradé_bleu-2" x1="0" y1="88.14" x2="227.42" y2="88.14" xlink:href="#Dégradé_bleu"/></defs><title>Fichier 2</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M7,71.06H152s7-1,4-7l-35.5-35.5s-7.5-7.5,1.5-13.5l11-11s6-8,13,0,76.5,76.5,76.5,76.5,9.5,7.5.5,14.5-76.5,76.5-76.5,76.5-4.5,7.5-11.5,2.5l-13.5-13.5s-7-7,0-12,33-33,33-33,8-9-2-10-144,0-144,0-8,0-8-6v-23S-.46,70.56,7,71.06Z"/></g></g></svg>-->
         </div>
 
         <div id="overlay-logo1" class="overlay hidden" onclick="dezoom('zoom-logo1', 'overlay-logo1', 'triple-logo-back')"> <div id="zoom-logo1" class="zoom-img hidden"  style="background-image: url('./images/Triple-Logo/Gilles_Joe.png'); background-position: center; background-size: cover;" onclick="dezoom('zoom-logo1', 'overlay-logo1', 'triple-logo-back')"></div></div>
@@ -168,7 +272,7 @@
                         <div class="row">
                             <div class="col-5">
                                 <div class="bloc-img">
-                                    <div id="casquette-photo" onclick="zoom('zoom-casquette','overlay-casquette', 'casquette-back')" style="background-image: url('./images/Casquette/modele.png')"> </div>
+                                    <div id="casquette-photo" onclick="zoom('zoom-casquette','overlay-casquette', 'casquette-back')" style="background-image: url('./images/Casquette/modele.jpg')"> </div>
                                 </div>
                             </div>
                             <div class="col-7">
@@ -213,6 +317,7 @@
             <div id="casquette-right" class="crea-border"></div>
             <div id="casquette-bottom" class="crea-border"></div>
             <svg id="fleche-casquette" onclick="ghibli_appear()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 227.42 176.27"><defs><style>.cls-1{stroke-miterlimit:10;fill:white;stroke:white;}</style><linearGradient id="Dégradé_bleu" x1="0.5" y1="88.14" x2="226.92" y2="88.14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#162984"/><stop offset="0.08" stop-color="#11328c"/><stop offset="0.22" stop-color="#034ca1"/><stop offset="0.25" stop-color="#0052a6"/><stop offset="0.5" stop-color="#0077b7"/><stop offset="0.75" stop-color="#0099bc"/><stop offset="0.99" stop-color="#00b9bc"/></linearGradient><linearGradient id="Dégradé_bleu-2" x1="0" y1="88.14" x2="227.42" y2="88.14" xlink:href="#Dégradé_bleu"/></defs><title>Fichier 2</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M7,71.06H152s7-1,4-7l-35.5-35.5s-7.5-7.5,1.5-13.5l11-11s6-8,13,0,76.5,76.5,76.5,76.5,9.5,7.5.5,14.5-76.5,76.5-76.5,76.5-4.5,7.5-11.5,2.5l-13.5-13.5s-7-7,0-12,33-33,33-33,8-9-2-10-144,0-144,0-8,0-8-6v-23S-.46,70.56,7,71.06Z"/></g></g></svg>
+            <!--<svg class="fleche-reverse" onclick="triple_logo_appear()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 227.42 176.27"><defs><style>.cls-1{stroke-miterlimit:10;fill:white;stroke:white;}</style><linearGradient id="Dégradé_bleu" x1="0.5" y1="88.14" x2="226.92" y2="88.14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#162984"/><stop offset="0.08" stop-color="#11328c"/><stop offset="0.22" stop-color="#034ca1"/><stop offset="0.25" stop-color="#0052a6"/><stop offset="0.5" stop-color="#0077b7"/><stop offset="0.75" stop-color="#0099bc"/><stop offset="0.99" stop-color="#00b9bc"/></linearGradient><linearGradient id="Dégradé_bleu-2" x1="0" y1="88.14" x2="227.42" y2="88.14" xlink:href="#Dégradé_bleu"/></defs><title>Fichier 2</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M7,71.06H152s7-1,4-7l-35.5-35.5s-7.5-7.5,1.5-13.5l11-11s6-8,13,0,76.5,76.5,76.5,76.5,9.5,7.5.5,14.5-76.5,76.5-76.5,76.5-4.5,7.5-11.5,2.5l-13.5-13.5s-7-7,0-12,33-33,33-33,8-9-2-10-144,0-144,0-8,0-8-6v-23S-.46,70.56,7,71.06Z"/></g></g></svg>-->
         </div>
 
         <div id="overlay-casquette" class="overlay hidden" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"> <div id="zoom-casquette" class="zoom-img hidden"  style="background-image: url('./images/Casquette/modele.png'); background-position: center; background-size: cover;" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"></div></div>
@@ -294,9 +399,77 @@
             <div id="ghibli-left" class="crea-border"></div>
             <div id="ghibli-right" class="crea-border"></div>
             <div id="ghibli-bottom" class="crea-border"></div>
+            <svg id="fleche-ghibli" onclick="echo_appear()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 227.42 176.27"><defs><style>.cls-1{stroke-miterlimit:10;fill:white;stroke:white;}</style><linearGradient id="Dégradé_bleu" x1="0.5" y1="88.14" x2="226.92" y2="88.14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#162984"/><stop offset="0.08" stop-color="#11328c"/><stop offset="0.22" stop-color="#034ca1"/><stop offset="0.25" stop-color="#0052a6"/><stop offset="0.5" stop-color="#0077b7"/><stop offset="0.75" stop-color="#0099bc"/><stop offset="0.99" stop-color="#00b9bc"/></linearGradient><linearGradient id="Dégradé_bleu-2" x1="0" y1="88.14" x2="227.42" y2="88.14" xlink:href="#Dégradé_bleu"/></defs><title>Fichier 2</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M7,71.06H152s7-1,4-7l-35.5-35.5s-7.5-7.5,1.5-13.5l11-11s6-8,13,0,76.5,76.5,76.5,76.5,9.5,7.5.5,14.5-76.5,76.5-76.5,76.5-4.5,7.5-11.5,2.5l-13.5-13.5s-7-7,0-12,33-33,33-33,8-9-2-10-144,0-144,0-8,0-8-6v-23S-.46,70.56,7,71.06Z"/></g></g></svg>
         </div>
 
-        <div id="overlay-ghibli" class="overlay hidden" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"> <div id="zoom-casquette" class="zoom-img hidden"  style="background-image: url('./images/Casquette/modele.png'); background-position: center; background-size: cover;" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"></div></div>
+        <div id="overlay-ghibli" class="overlay hidden" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"> <div id="zoom-ghibli" class="zoom-img hidden"  style="background-image: url('./images/Casquette/modele.png'); background-position: center; background-size: cover;" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"></div></div>
+
+    </div>
+
+    <div id="echo" class="page-crea">
+        <div id="echo-back">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bloc-vide"></div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 no-padding">
+                    <div id="echo-content" class="hidden">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="bloc-img">
+                                    <div class="echo-affiche"></div>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="bloc-texte">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="titre-crea">
+                                                <div id="echo-title"> Affiche Echo </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 description-crea">
+                                            <span class="echo-description">
+                                                Pour ce projet d’esthétique, il fallait réaliser une affiche pour un festival d’arts visuels et sonores en s’appuyant sur des mots clés et des idées clés rattachés à ce festival, pour être en mesure de justifier les choix de réalisations de l’affiche.
+                                                <br><br>Sur mon affiche, les cercles concentriques représentent donc les ondes sonores, et donc le coté sonore du festival. Le coté visuel du festival est lui représenté par le spectre coloré au centre des cercles.
+                                                <br><br>Il fallait aussi absolument faire apparaitre sur l’affiche la date du festival et son nom, et nous avions ensuite le choix des informations que nous placions sur celle-ci. J’ai donc choisis d’en placer le maximum, tout en conservant des niveaux de lecture clairs.
+                                            </span>
+                                        </div>
+                                        <div class="col-6 description-crea">
+                                            <span class="echo-description">
+                                                Le titre du festival et la date de celui-ci sont donc clairement plus mis en avant que la description du type de festival ou son numéro d’édition, moins mis en valeur et placé en petits sur les bords de l’affiche.
+                                                <br><br>Enfin, l’idée était de créer un cadre à l’affiche pour mettre en valeur son contenu et notamment les cercles et le spectres qui sont le centre de l’affiche et l’élément qui doit attiré l’oeil et l’attention. Je me suis donc appuyer sur tout ces éléments pour créer mon affiche.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bloc-vide"></div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+            <div id="echo-top" class="crea-border"></div>
+            <div id="echo-left" class="crea-border"></div>
+            <div id="echo-right" class="crea-border"></div>
+            <div id="echo-bottom" class="crea-border"></div>
+        </div>
+
+        <div id="overlay-echo" class="overlay hidden" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"> <div id="zoom-echo" class="zoom-img hidden"  style="background-image: url('./images/Casquette/modele.png'); background-position: center; background-size: cover;" onclick="dezoom('zoom-casquette', 'overlay-casquette', 'casquette-back')"></div></div>
 
     </div>
 

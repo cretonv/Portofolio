@@ -86,6 +86,8 @@ var real_category = document.querySelectorAll('.real-category')
 
 /* Variables de la page mon profil */
 
+var profil_content = document.querySelector('#profil-content-container')
+
 var profil_active = 0;
 var home_profil = document.querySelector('#home-profil')
 var competences = document.querySelector('#competences')
@@ -97,6 +99,8 @@ var competences_descriptions = document.querySelectorAll('.competence-descriptio
 /* Variables de la page contacts */
 
 var contacts = document.querySelector('#contacts')
+
+var contacts_content = document.querySelector('#contacts-content-container')
 
 /*------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------*/
@@ -211,7 +215,7 @@ function profil_access() {
 
     profil.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
-
+    profil_content.classList.remove('hidden-opacity')
 
     menu.open = false                                       // On met à jour l'indicateur d'état
 }
@@ -548,7 +552,7 @@ function contacts_access() {
 
     contacts.classList.add('open')                      // On ouvre la rubrique séléctionnés, ici realisations
 
-
+    contacts_content.classList.remove('hidden-opacity')
 
     menu.open = false                                       // On met à jour l'indicateur d'état
 }

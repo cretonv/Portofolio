@@ -10,7 +10,7 @@
     <!--<script src="./lib/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>-->
 </head>
 <body>
-    <div id="burger" class="oh" onclick="burger_action()">
+    <div id="burger-crea" class="oh" onclick="burger_action()">
         <div id="burger-hover"></div>
         <div class="burger-line-wrap-0 burger-line-wrap oh">
             <div class="burger-line burger-line-dark" style="transform: translate3d(0%, 0px, 0px); transition: width 0.9s; width: 5vh;"></div>
@@ -29,6 +29,55 @@
             <div id="burger-border-left" class="burger-border"></div>
             <div id="burger-border-right" class="burger-border"></div>
         </div>-->
+    </div>
+
+    <div id="menu">  <!-- COed HTML de la page menu -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="ligne-vide-menu-crea"></div>
+            </div>
+
+            <div class="content-menu-crea">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4 no-padding">
+                        <div class="menu-crea-element" onclick="qwwizzy_menu()">
+                            <div style="background-image:url('./images/qwwizzy/qwwizzy1.png')" class="item-image"></div>
+                            <div id="qwwizzy-menu-item" class="item-name">Qwwizzy</div>
+
+                            <div class="crea-border contact-border-bottom"></div>
+                            <div class="crea-border contact-border-right"></div>
+                            <div class="crea-border contact-border-left"></div>
+                            <div class="crea-border contact-border-top"></div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        <div class="menu-crea-element" onclick="doors_menu()">
+                            <div style="background-image:url('./images/Doors/Doors.png')" class="item-image"></div>
+                            <div class="item-name">
+                                <div id="doors-menu-item" style="background-image: url('./images/logo_noir.svg')"></div>
+                            </div>
+
+                            <div class="crea-border contact-border-bottom"></div>
+                            <div class="crea-border contact-border-right"></div>
+                            <div class="crea-border contact-border-left"></div>
+                            <div class="crea-border contact-border-top"></div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="ligne-vide-menu-crea"></div>
+            </div>
+        </div>
+        <div id="ligne-reseau">
+            <div id="linkedin" class="reseau-element"> <a class="no-link" target="_blank" href="https://www.linkedin.com/in/vincent-creton-776816187"> <i class="fab fa-linkedin"></i> </a></div>
+            <div id="github" class="reseau-element"> <a class="no-link" target="_blank" href="https://github.com/cretonv"> <i class="fab fa-github"></i> </a> </div>
+            <div id="unsplash" class="reseau-element"><a class="no-link" target="_blank" href="https://unsplash.com/@vcreton"> <img id="unsplash-logo" src="./images/logo_unsplash.png" alt="logo unsplash"/> </a></div>
+        </div>
     </div>
 
     <header class="page-crea open">
@@ -87,7 +136,7 @@
         <svg id="home-fleche" onclick="qwwizzy_appear()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 227.42 176.27"><defs><style>.cls-1{stroke-miterlimit:10;fill:url(#Dégradé_bleu);stroke:url(#Dégradé_bleu-2);}</style><linearGradient id="Dégradé_bleu" x1="0.5" y1="88.14" x2="226.92" y2="88.14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#162984"/><stop offset="0.08" stop-color="#11328c"/><stop offset="0.22" stop-color="#034ca1"/><stop offset="0.25" stop-color="#0052a6"/><stop offset="0.5" stop-color="#0077b7"/><stop offset="0.75" stop-color="#0099bc"/><stop offset="0.99" stop-color="#00b9bc"/></linearGradient><linearGradient id="Dégradé_bleu-2" x1="0" y1="88.14" x2="227.42" y2="88.14" xlink:href="#Dégradé_bleu"/></defs><title>Fichier 2</title><path class="cls-1" d="M7,71.06H152s7-1,4-7l-35.5-35.5s-7.5-7.5,1.5-13.5l11-11s6-8,13,0,76.5,76.5,76.5,76.5,9.5,7.5.5,14.5-76.5,76.5-76.5,76.5-4.5,7.5-11.5,2.5l-13.5-13.5s-7-7,0-12,33-33,33-33,8-9-2-10-144,0-144,0-8,0-8-6v-23S-.46,70.56,7,71.06Z"/></svg>
     </header>
 
-    <div id="qwwizzy" class="page-crea">
+    <div id="qwwizzy" class="page-crea" scroll="onscroll()">
         <div class="row">
             <div class="col-1"></div>
             <div class="col-10">
@@ -114,12 +163,12 @@
                                 <div class="row ligne-photo">
                                     <div class="col-12">
                                         <div class="video-container">
-                                            <video autoplay loop poster="./images/qwwizzy/qwwizzy2.png" class="crea-video" src="./images/qwwizzy/qwwizzy4.mov"></video>
+                                            <video autoplay loop poster="./images/qwwizzy/qwwizzy2.jpg" class="crea-video" src="./images/qwwizzy/qwwizzy4.mov"></video>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row ligne-photo">
-                                    <div class="col-6"> <div style="background-image: url('./images/qwwizzy/qwwizzy2.png')" class="crea-img"></div> </div>
+                                    <div class="col-6"> <div style="background-image: url('./images/qwwizzy/qwwizzy2.jpg')" class="crea-img"></div> </div>
                                     <div class="col-6">
                                         <div class="video-container">
                                             <video autoplay loop class="crea-video" src="./images/qwwizzy/qwwizzy5.mov"></video>
