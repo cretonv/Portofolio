@@ -48,15 +48,24 @@
 }*/
 /*-------------------—————————————————————————————————————————————————*/
 
-header, #menu { overflow-y: hidden; }
-/* overflow-y: scroll; */
+header, #menu { overflow-y: hidden;}
 
-#home-container {
-    background-image: url("../images/home.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+@media screen and (max-width: 769px){
+    #home-container {
+        background-color: rgba(0, 0, 0, 0.95);
+        height: 100vh;
+    }
 }
+
+@media screen and (min-width: 769px){
+    #home-container {
+        background-image: url("../images/home.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}
+
 
 li, ul {
     list-style: none;
@@ -144,25 +153,72 @@ img {
     height: 48vh;
     margin-top: 2vh;
 }
+@media screen and (max-width: 769px){
+    #acroche {
+        color: white;
+        font-size: 7vh;
+        margin-bottom: 2vh;
+    }
 
-#acroche {
-    color: white;
-    font-size: 7vh;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
+    /* Texte de description sur la page d'acceuil */
+    .description {
+        color: white;
+        height: 30vh;
+        font-size: 1.60vh;
+        margin-top: 3vh;
+        font-family: Montserrat;
+    }
 }
+
+@media screen and (min-width: 769px){
+    #acroche {
+        color: white;
+        font-size: 7vh;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    }
+
+    /* Texte de description sur la page d'acceuil */
+    .description {
+        color: white;
+        height: 30vh;
+        font-size: 1.5vh;
+        margin-top: 3vh;
+        font-family: Montserrat;
+    }
+}
+
+
 /* L'animation de la 'photo logo' sur la pas d'acceuil */
-.flip-card {
-    border-radius: 100%;
-    background-size: cover;
-    background-position: center;
-    min-width: 30vh;
-    max-width: 30vh;
-    min-height: 30vh;
-    max-height: 30vh;
-    margin: 10vh 5vh 10vh 5vh;  /* haut | droit | bas | gauche */
-    perspective: 400px;
+
+@media screen and (max-width: 768px){
+    .flip-card {
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        min-width: 30vh;
+        max-width: 30vh;
+        min-height: 30vh;
+        max-height: 30vh;
+        margin: 5vh;
+        perspective: 400px;
+    }
 }
+
+@media screen and (min-width: 768px){
+    .flip-card {
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        min-width: 30vh;
+        max-width: 30vh;
+        min-height: 30vh;
+        max-height: 30vh;
+        margin: 10vh 5vh;
+        perspective: 400px;
+    }
+}
+
 
 .flip-card-inner {
     position: relative;
@@ -405,16 +461,6 @@ a#button2:hover {
 }
 
 /* ------------------------------------------------------------------ */
-
-/* Texte de description sur la page d'acceuil */
-
-.description {
-    color: white;
-    height: 30vh;
-    font-size: 1.5vh;
-    margin-top: 3vh;
-    font-family: Montserrat;
-}
 
 /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */
