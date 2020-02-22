@@ -34,6 +34,18 @@
     font-style: italic;
 }
 
+
+@media (max-width: 576px)  {
+    .desktop {
+        display: none!important;
+    }
+}
+
+/*@media (min-width: 768px) {
+    .desktop {
+        display: block !important;
+    }
+}*/
 /*-------------------—————————————————————————————————————————————————*/
 
 header, #menu { overflow-y: hidden; }
@@ -750,26 +762,62 @@ a#button2:hover {
 /* ------------------------------------------------------------------ */
 /* Règles CSS pour l'affichage des différentes catégories */
 
-.real-category {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    height: 50vh;
-    opacity: 0;
-    transition: all 0.5s 3s;
-    overflow: hidden;
-    text-align: center;
+@media screen and (max-width: 769px) {
+    .real-category {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        height: 21vh;
+        opacity: 0;
+        transition: all 0.5s 3s;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .catégorie-img {
+        height: 21vh;
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+    }
 }
 
-.catégorie-img {
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    border-radius: 3px;
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
+@media screen and (min-width: 769px) {
+    .real-category {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        height: 50vh;
+        opacity: 0;
+        transition: all 0.5s 3s;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .catégorie-img {
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #production-web {
+        padding-left: 7.5vw;
+        padding-right: 2.5vw;
+    }
+
+    #production-av {
+        padding-right: 7.5vw;
+        padding-left: 2.5vw;
+    }
 }
 
 .real-category:hover .catégorie-img, .menu-crea-element:hover .item-image{
@@ -788,16 +836,6 @@ a#button2:hover {
 .real-category:hover .catégorie-name{
     transform: translateY(-28.5vh);
     transition: all 0.7s;
-}
-
-#production-web {
-    padding-left: 7.5vw;
-    padding-right: 2.5vw;
-}
-
-#production-av {
-    padding-right: 7.5vw;
-    padding-left: 2.5vw;
 }
 
 #web-img {
@@ -835,6 +873,51 @@ a#button2:hover {
 
 #photos.open {
     width: 100vw;
+}
+
+.error-message {
+    width: 80vw;
+    position: relative;
+    right: 10vw;
+    left: 10vw;
+    top: 20vh;
+    font-family: Raleway;
+    font-size: 4vw;
+    text-align: center;
+}
+
+/* Les règles suivantes concernent l'astronaute de la page d'erreur */
+
+#astronaute {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+.anim_astro {        /* rÃ¨gles pour l'naimation de  l'astronaute */
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-name: astro;
+    animation-timing-function: linear;
+}
+
+@keyframes astro {
+    0% {
+        right: 5%;
+        bottom: 10%;
+    }
+
+    50% {
+        right:70%;
+        bottom: 10%;
+        transform: rotate(0.2turn);
+    }
+
+    100% {
+        right: 5%;
+        bottom: 10%;
+        rotate(0.4turn);
+    }
 }
 
 /* ------------------------------------------------------------------ */
