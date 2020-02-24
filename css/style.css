@@ -1016,13 +1016,26 @@ a#button2:hover {
     white-space: nowrap;
 }
 
-.nav-item {
-    font-size: 4vh;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    opacity: 0.8;
-    font-family: Raleway;
+@media screen and (max-width: 769px){
+    .nav-item {
+        font-size: 3.5vw;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        opacity: 0.8;
+        font-family: Raleway;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .nav-item {
+        font-size: 4vh;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        opacity: 0.8;
+        font-family: Raleway;
+    }
 }
 
 .nav-item::after {
